@@ -3,7 +3,7 @@
     <head>
         <!--Meta Tags-->
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src: 'self' 'unsafe-inline' 'unsafe-eval'">
 
         <!--Title-->
         <title>Fractal</title>
@@ -11,6 +11,7 @@
         <!--CSS Links-->
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/index.css" rel="stylesheet" />
+        <link href="css/platformOverrides.css" rel="stylesheet" />
     </head>
     <body>
         <!--Main Content Container-->
@@ -18,36 +19,60 @@
             <!--List Half-->
             <div class="first-half">
                 <!--List-->
-                <ul class="list-group maxheight">
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                    <li class="list-group-item">Cras justo odio</li>
-                    <li class="list-group-item">Dapibus ac facilisis in</li>
-                    <li class="list-group-item">Morbi leo risus</li>
-                    <li class="list-group-item">Porta ac consectetur ac</li>
-                    <li class="list-group-item">Vestibulum at eros</li>
-                </ul>
+                <div id="music-list" class="list">
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                    <div class="list-item">
+                        Item
+                    </div>
+                </div>
             </div>
-            <!--Content Half-->
+            <!--Visual Half-->
             <div class="second-half">
+                <canvas id="wave-canvas" style="width: 100%; height: 100%;"></canvas>
             </div>
         </div>
 
@@ -56,6 +81,7 @@
         <script src="scripts/jquery-2.1.4.min.js"></script>
         <script src="scripts/platformOverrides.js"></script> <!--Custom-->
         <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/music.js"></script> <!--Custom-->
         <script src="scripts/index.js"></script> <!--Custom-->
     </body>
 </html>
