@@ -1,3 +1,42 @@
-﻿h1 {
+﻿/* Font-Family and... CSS, I guess? */
+html, body, #container {
     font-family: Arial;
+    width: 100%;
+    height: 100%;
+}
+
+.maxheight {
+    height: 100%;
+}
+
+/* Landscape orientation screen division */
+@media (orientation: landscape) {
+    .first-half {
+        height: 100%;
+        width: 50%;
+        float: left;
+        background-color: #61c0ff;
+    }
+
+    .second-half {
+        height: 100%;
+        width: 50%;
+        float: right;
+        background-color: #3498db;
+    }
+}
+
+/* Portrait orientation screen division */
+@media (orientation: portrait) {
+        .first-half {
+        height: 50%;
+        width: 100%;
+        background-color: #61c0ff;
+    }
+
+    .second-half {
+        height: 50%;
+        width: 100%;
+        background-color: #3498db;
+    }
 }

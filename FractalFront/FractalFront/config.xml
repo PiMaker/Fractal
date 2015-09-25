@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.github.pimaker" version="0.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
+<widget xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps" id="io.github.pimaker.fractal" version="0.0.0" xmlns="http://www.w3.org/ns/widgets" defaultlocale="en-US">
   <name>Fractal</name>
   <description>Music Player for the Fractal Music Streaming Platform.</description>
   <author href="http://cordova.io" email="dev@cordova.apache.org">PiMaker</author>
