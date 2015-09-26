@@ -31,7 +31,7 @@ html, body, #container {
 
 /* Portrait orientation screen division */
 @media (orientation: portrait) {
-        .first-half {
+    .first-half {
         height: 50%;
         width: 100%;
         background-color: #61c0ff;

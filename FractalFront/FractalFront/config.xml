@@ -113,8 +113,8 @@
       <vs:name>Fractal</vs:name>
     </vs:platformSpecificWidget>
   </vs:platformSpecificValues>
-  <vs:plugin name="cordova-plugin-media" version="1.0.2-dev" src="D:\Repos\cordova-plugin-media" />
   <access origin="http://*" />
   <access origin="https://*" />
-  <vs:plugin name="cordova-plugin-whitelist" version="1.1.0" />
+  <vs:plugin name="cordova-plugin-whitelist" version="1.1.1-dev" src="D:\Repos\cordova-plugin-whitelist" />
+  <vs:plugin name="cordova-plugin-media" version="1.0.2-dev" src="D:\Repos\cordova-plugin-media" />
 </widget>

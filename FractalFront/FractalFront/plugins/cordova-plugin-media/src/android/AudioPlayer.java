@@ -27,6 +27,8 @@ import android.media.MediaRecorder;
 import android.os.Environment;
 import android.util.Log;
 
+import android.media.audiofx.Visualizer;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -87,6 +89,8 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
     private boolean prepareOnly = true;     // playback after file prepare flag
     private int seekOnPrepared = 0;     // seek to this location once media is prepared
 
+    private Visualizer visualizer = null;
+
     /**
      * Constructor.
      *
@@ -104,7 +108,6 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
         } else {
             this.tempFile = "/data/data/" + handler.cordova.getActivity().getPackageName() + "/cache/tmprecording.3gp";
         }
-
     }
 
     /**
@@ -124,6 +127,12 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
             this.stopRecording();
             this.recorder.release();
             this.recorder = null;
+        }
+
+        if (this.visualizer != null) {
+            this.visualizer.setEnabled(false);
+            this.visualizer.release();
+            this.visualizer = null;
         }
     }
 
@@ -269,10 +278,26 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
         }
     }
 
-    public short[] snoop() {
-      short [] arr = new short[1024];
-      GrabAudio.snoop(arr, 0);
-      return arr;
+    public byte[] getFft() {
+        if (!this.visualizer.getEnabled()) {
+            this.visualizer.setEnabled(true);
+        }
+        byte[] arr = new byte[visualizer.getCaptureSize()];
+        this.visualizer.getFft(arr);
+        return arr;
+    }
+
+    public int[] getWaveForm() {
+        if (!this.visualizer.getEnabled()) {
+            this.visualizer.setEnabled(true);
+        }
+        byte[] arr = new byte[visualizer.getCaptureSize()];
+        this.visualizer.getWaveForm(arr);
+        int[] arr2 = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+          arr2[i] = arr[i] < 0 ? arr[i] + 256 : arr[i];
+        }
+        return arr2;
     }
 
     /**
@@ -477,6 +502,7 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
                 case MEDIA_NONE:
                     if (this.player == null) {
                         this.player = new MediaPlayer();
+                        this.visualizer = new Visualizer(this.player.getAudioSessionId());
                     }
                     try {
                         this.loadAudioFile(file);
@@ -499,6 +525,7 @@ public class AudioPlayer implements OnCompletionListener, OnPreparedListener, On
                         //maybe it was recording?
                         if(this.recorder!=null && player==null) {
                             this.player = new MediaPlayer();
+                            this.visualizer = new Visualizer(this.player.getAudioSessionId());
                             this.prepareOnly = false;
 
                             try {

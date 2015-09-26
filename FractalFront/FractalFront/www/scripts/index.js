@@ -13,6 +13,7 @@
 
         music.init();
         music.play("http://stepro.synology.me/digiworld_music/intro.mp3");
+        waveformVisualization.beginRendering(document.getElementById("wave-canvas"));
     };
 
     function onPause() {

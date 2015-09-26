@@ -103,9 +103,13 @@ Media.prototype.pause = function() {
     exec(null, this.errorCallback, "Media", "pausePlayingAudio", [this.id]);
 };
 
-Media.prototype.snoop = function(callback) {
-    exec(callback, function(err){console.error("ERROR: " + err)}, "Media", "snoop", [this.id]);
+Media.prototype.getFft = function(callback) {
+    exec(callback, this.errorCallback, "Media", "getFft", [this.id]);
 };
+
+Media.prototype.getWaveForm = function(callback) {
+    exec(callback, this.errorCallback, "Media", "getWaveForm", [this.id]);
+}
 
 /**
  * Get duration of an audio file.

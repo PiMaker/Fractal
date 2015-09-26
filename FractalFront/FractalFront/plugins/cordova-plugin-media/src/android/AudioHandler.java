@@ -138,6 +138,22 @@ public class AudioHandler extends CordovaPlugin {
             messageChannel = callbackContext;
             return true;
         }
+        else if (action.equals("getFft")) {
+          AudioPlayer audio = this.players.get(args.getString(0));
+          if (audio != null) {
+              callbackContext.sendPluginResult(new PluginResult(status, new JSONArray(audio.getFft())));
+              return true;
+          }
+          return false;
+        }
+        else if (action.equals("getWaveForm")) {
+          AudioPlayer audio = this.players.get(args.getString(0));
+          if (audio != null) {
+              callbackContext.sendPluginResult(new PluginResult(status, new JSONArray(audio.getWaveForm())));
+              return true;
+          }
+          return false;
+        }
         else { // Unrecognized action.
             return false;
         }
