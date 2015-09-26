@@ -113,4 +113,5 @@
       <vs:name>Fractal</vs:name>
     </vs:platformSpecificWidget>
   </vs:platformSpecificValues>
+  <vs:plugin name="cordova-plugin-media" version="1.0.2-dev" src="D:\Repos\cordova-plugin-media" />
 </widget>
