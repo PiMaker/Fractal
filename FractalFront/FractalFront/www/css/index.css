@@ -3,10 +3,13 @@ html, body, #container {
     font-family: Arial;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
+/* Stuff */
 .maxheight {
     height: 100%;
+    overflow-y: scroll;
 }
 
 /* Landscape orientation screen division */
@@ -39,4 +42,23 @@ html, body, #container {
         width: 100%;
         background-color: #3498db;
     }
+}
+
+/* Lists */
+.list {
+    overflow-y: scroll;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.list-item {
+    border-bottom: #606060 .05em solid;
+    color: white;
+    padding: .5em;
+    width: 100%;
+}
+
+.list-item:last-child {
+    border-bottom: none 0;
 }
