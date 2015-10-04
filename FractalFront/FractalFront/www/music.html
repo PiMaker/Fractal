@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <!--Meta Tags-->
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline';">
+
+        <!--Title-->
+        <title>Fractal</title>
+
+        <!--CSS Links-->
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/index.css" rel="stylesheet" />
+        <link href="css/platformOverrides.css" rel="stylesheet" />
+        <style>html { outline: 0; }</style>
+    </head>
+    <body>
+        <!--Main Content Container-->
+        <div id="container">
+        <!--Visual Half-->
+        <div class="second-half">
+            <canvas id="wave-canvas" width="75" height="40" style="height: 100%; width: 100%;"></canvas>
+        </div>
+        <!--List Half-->
+        <div class="first-half">
+            <!--List-->
+            <div id="music-list" class="list">
+                <div class="list-item">
+                    Loading...
+                </div>
+            </div>
+        </div>
+
+        <!--Scripts-->
+        <script src="cordova.js"></script> <!--Reference is added at build time-->
+        <script src="scripts/jquery-2.1.4.min.js"></script>
+        <script src="scripts/platformOverrides.js"></script> <!--Custom-->
+        <script src="scripts/bootstrap.min.js"></script>
+        <script src="scripts/music.js"></script> <!--Custom-->
+        <script src="scripts/visualizations/waveformVisualization.js"></script> <!--Custom-->
+        <script src="scripts/index.js"></script> <!--Custom-->
+    </body>
+</html>

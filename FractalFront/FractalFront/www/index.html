@@ -10,79 +10,38 @@
 
         <!--CSS Links-->
         <link href="css/bootstrap.min.css" rel="stylesheet" />
-        <link href="css/index.css" rel="stylesheet" />
-        <link href="css/platformOverrides.css" rel="stylesheet" />
+        <link href="css/login.css" rel="stylesheet" />
+        <style>button button:focus button:active { outline: 0 !important; }</style>
+        <link href="css/waitMe.min.css" rel="stylesheet"/>
     </head>
     <body>
-        <!--Main Content Container-->
-        <div id="container">
-            <!--Visual Half-->
-            <div class="second-half">
-                <canvas id="wave-canvas" style="width: 100%; height: 100%;"></canvas>
-            </div>
-            <!--List Half-->
-            <div class="first-half">
-                <!--List-->
-                <div id="music-list" class="list">
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
-                    <div class="list-item">
-                        Item
-                    </div>
+        <div class="container">
+            <form class="form-signin">
+                <h2 class="form-signin-heading">Please enter your connection details</h2>
+                <label for="inputServer" class="sr-only">Server</label>
+                <input id="inputServer" class="form-control" placeholder="Server URL" autofocus>
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-server" id="chkServer"> Remember server
+                    </label>
                 </div>
-            </div>
-        </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-password" id="chkPassword"> Remember password (unencrypted!)
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block" type="button" id="btnConnect">Connect</button>
+            </form>
+        </div> <!-- /container -->
 
         <!--Scripts-->
         <script src="cordova.js"></script> <!--Reference is added at build time-->
         <script src="scripts/jquery-2.1.4.min.js"></script>
+        <script src="scripts/waitMe.min.js"></script>
         <script src="scripts/platformOverrides.js"></script> <!--Custom-->
         <script src="scripts/bootstrap.min.js"></script>
-        <script src="scripts/music.js"></script> <!--Custom-->
-        <script src="scripts/visualizations/waveformVisualization.js"></script> <!--Custom-->
-        <script src="scripts/index.js"></script> <!--Custom-->
+        <script src="scripts/login.js"></script>
     </body>
 </html>

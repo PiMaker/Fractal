@@ -117,4 +117,5 @@
   <access origin="https://*" />
   <vs:plugin name="cordova-plugin-whitelist" version="1.1.1-dev" src="D:\Repos\cordova-plugin-whitelist" />
   <vs:plugin name="cordova-plugin-media" version="1.0.2-dev" src="D:\Repos\cordova-plugin-media" />
+  <vs:plugin name="org.apache.cordova.dialogs" version="0.3.0" />
 </widget>
