@@ -44,21 +44,63 @@ html, body, #container {
     }
 }
 
-/* Lists */
-.list {
-    overflow-y: scroll;
-    font-size: 20px;
-    height: 100%;
-    width: 100%;
-}
 
-.list-item {
-    border-bottom: #606060 .05em solid;
-    color: white;
-    padding: .5em;
-    width: 100%;
+/* From Sortable.js */
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
+.block {
+	opacity: 1;
+	position: absolute;
+}
+	.block__list {
+		padding: 20px 0;
+		max-width: 360px;
+		margin-top: -8px;
+		margin-left: 5px;
+		background-color: #fff;
+	}
+		.block__list-title {
+			margin: -20px 0 0;
+			padding: 10px;
+			text-align: center;
+			background: #5F9EDF;
+		}
+		.block__list li { cursor: move; }
 
-.list-item:last-child {
-    border-bottom: none 0;
-}
+	.block__list_words li {
+		background-color: #fff;
+		padding: 10px 40px;
+	}
+		.block__list_words .sortable-ghost {
+			opacity: 0.4;
+			background-color: #F4E2C9;
+		}
+
+		.block__list_words li:first-letter {
+			text-transform: uppercase;
+		}
+
+	.block__list_tags {
+		padding-left: 30px;
+	}
+
+	.block__list_tags:after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+		.block__list_tags li {
+			color: #fff;
+			float: left;
+			margin: 8px 20px 10px 0;
+			padding: 5px 10px;
+			min-width: 10px;
+			background-color: #5F9EDF;
+			text-align: center;
+		}
+			.block__list_tags li:first-child:first-letter {
+				text-transform: uppercase;
+			}

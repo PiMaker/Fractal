@@ -3,7 +3,6 @@
     <head>
         <!--Meta Tags-->
         <meta charset="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline';">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
         <!--Title-->
@@ -13,6 +12,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/login.css" rel="stylesheet" />
         <link href="css/waitMe.min.css" rel="stylesheet" />
+        <link href="css/ply.css" rel="stylesheet"/>
         <style>:focus { outline: none !important; }</style>
     </head>
     <body>
@@ -20,9 +20,9 @@
             <form class="form-signin">
                 <h2 class="form-signin-heading">Please enter your connection details</h2>
                 <label for="inputServer" class="sr-only">Server</label>
-                <input id="inputServer" class="form-control" placeholder="Server URL" autofocus>
+                <input id="inputServer" class="form-control" placeholder="Server URL" autofocus onkeydown="if (event.keyCode === 13) document.getElementById('btnConnect').click()">
                 <label for="inputPassword" class="sr-only">Password</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" onkeydown="if (event.keyCode === 13) document.getElementById('btnConnect').click()">
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" value="remember-server" id="chkServer"> Remember server
@@ -41,8 +41,10 @@
         <script src="cordova.js"></script> <!--Reference is added at build time-->
         <script src="scripts/jquery-2.1.4.min.js"></script>
         <script src="scripts/waitMe.min.js"></script>
+        <script src="scripts/promise.js"></script>
+        <script src="scripts/ply.min.js"></script>
         <script src="scripts/platformOverrides.js"></script> <!--Custom-->
         <script src="scripts/bootstrap.min.js"></script>
-        <script src="scripts/login.js"></script>
+        <script src="scripts/login.js"></script> <!--Custom-->
     </body>
 </html>

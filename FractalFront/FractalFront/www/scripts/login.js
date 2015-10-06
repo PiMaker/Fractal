@@ -44,12 +44,7 @@ function connectClick() {
             window.location = "music.html?d=" + JSON.stringify(data);
         },
         error: function(error, msg) {
-            navigator.notification.alert(
-                msg + " (" + error.status + ")",
-                function() {},
-                "Error",
-                "Dismiss"
-            );
+            Ply.dialog("alert", msg + " (" + error.status + ")");
             $("body").waitMe("hide");
         }
     });

@@ -14,21 +14,23 @@
         var canvas = document.getElementById("wave-canvas");
 
         music.init();
-        music.play("http://stepro.synology.me/digiworld_music/intro.mp3");
         waveformVisualization.beginRendering(canvas);
 
         // Update list
-        var musicList = $("#music-list");
-        musicList.children().remove();
+        var musicList = document.getElementById("music-list");
         var jsonData = JSON.parse(getParameterByName("d"));
         for (var i in jsonData) {
             if (jsonData.hasOwnProperty(i)) {
                 var musicTitle = jsonData[i];
-                var div = musicList.append("<div></div>");
-                div.addClass("list-item");
-                div.text(musicTitle.ID3Tags.Title + " - " + musicTitle.ID3Tags.JoinedArtists);
+                var text = musicTitle.ID3Tags.Title + " - " + musicTitle.ID3Tags.JoinedArtists;
+                $(musicList).append("<li>" + text).addClass("list-group-item");
             }
         }
+
+        // Create sortable list
+        Sortable.create(musicList, {
+            group: { name: "music-list-group", pull: "clone", put: false }
+        });
     };
 
     function onPause() {
