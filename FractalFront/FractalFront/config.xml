@@ -108,6 +108,7 @@
   <preference name="ShowTitle" value="False" />
   <preference name="InAppBrowserStorageEnabled" value="True" />
   <preference name="SuppressesIncrementalRendering" value="False" />
+  <preference name="EnableViewportScale" value="false" />
   <vs:platformSpecificValues>
     <vs:platformSpecificWidget platformName="windows" id="io.github.pimaker">
       <vs:name>Fractal</vs:name>
