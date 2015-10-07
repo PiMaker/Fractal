@@ -11,8 +11,10 @@
         <!--CSS Links-->
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/index.css" rel="stylesheet" />
+        <link href="css/font-awesome.min.css" rel="stylesheet"/>
         <link href="css/platformOverrides.css" rel="stylesheet" />
         <style>:focus { outline: none !important; }</style>
+        <link href="css/text.css" rel="stylesheet"/>
     </head>
     <body>
         <!--Main Content Container-->
@@ -20,9 +22,10 @@
             <!--Visual Half-->
             <div class="second-half" style="position: relative;">
                 <canvas id="wave-canvas" width="75" height="40" style="height: 100%; width: 100%; z-index: 1;"></canvas>
-                <!--List-->
-                <ul id="play-list" class="list_style_default list_style_transparent" style="z-index: 2; position: absolute; left: 0; top: 0;">
-                </ul>
+                <div id="play-list-container">
+                    <!--List-->
+                    <ul id="play-list" class="list_style_default list_style_transparent" style="height: 100%; width: 100%; padding: 0; overflow-y: visible;"></ul>
+                </div>
             </div>
             <!--List Half-->
             <div class="first-half">

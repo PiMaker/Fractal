@@ -2,7 +2,7 @@
     "use strict";
 
     var randomModeText = "Random playlist, drag songs here to create your own";
-    $("#play-list").append("<li>" + randomModeText);
+    $("#play-list").append("<li id='random-mode-text'>" + randomModeText);
 
     document.addEventListener( "deviceready", onDeviceReady.bind( this ), false );
 
@@ -31,7 +31,7 @@
                 } else {
                     text = musicTitle.ID3Tags.Title + " - " + musicTitle.ID3Tags.JoinedArtists;
                 }
-                $(musicList).append("<li><span class='handle'>☰</span>" + text).addClass("list-group-item");
+                $(musicList).append("<li><span class='handle'>☰</span><div class='list-text'>" + text + "</div>").addClass("list-group-item");
             }
         }
 
@@ -40,7 +40,13 @@
             group: { name: "music-list-group", pull: "clone", put: false },
             handle: ".handle",
             scroll: true,
-            sort: false
+            sort: false,
+            onSort: function (evt) {
+                var item = $(evt.item);
+                if (item.parent().id === musicList.id) {
+                    item.children("button").remove();
+                }
+            }
         });
 
         var playListJQ = $("#play-list");
@@ -49,7 +55,7 @@
                 return $(this).text() === randomModeText;
             }).remove();
             if (playListJQ.children().length === 0) {
-                playListJQ.append("<li>" + randomModeText);
+                playListJQ.append("<li id='random-mode-text'>" + randomModeText);
             }
         }
 
@@ -61,12 +67,19 @@
             onSort: function(evt) {
                 updateRandomModeText();
                 var item = $(evt.item);
-                var removeBtn = item.append("<button>");
-                removeBtn.addClass("remove-btn");
-                removeBtn.on("click", function() {
-                    item.remove();
-                    updateRandomModeText();
-                });
+                if (item.has("button").length === 0) {
+                    var removeBtn = $("<button><i></i></button>");
+                    removeBtn.children().first().addClass("fa");
+                    removeBtn.children().first().addClass("fa-times");
+                    removeBtn.appendTo(item);
+                    removeBtn.addClass("remove-btn");
+                    removeBtn.addClass("btn");
+                    removeBtn.addClass("btn-info");
+                    removeBtn.on("click", function() {
+                        item.remove();
+                        updateRandomModeText();
+                    });
+                }
             }
         });
     };

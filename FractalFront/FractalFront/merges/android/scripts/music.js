@@ -21,5 +21,14 @@
         } else {
             callback(new Int8Array(1024));
         }
+    },
+    getDuration: function () {
+
+    },
+    getCurrentTime: function () {
+
+    },
+    setCurrentTime: function () {
+
     }
 };

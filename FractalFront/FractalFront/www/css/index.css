@@ -55,15 +55,27 @@ html, body, #container {
     padding: 0.2em;
 }
 
+/* List items */
+
 .handle {
     color: #61c0ff;
     cursor: move;
     font-size: 1.5em;
+    padding-top: -1em;
     padding-right: 0.5em;
-    padding-top: 0.1em;
+    float: left;
 }
 
-/* From Sortable.js */
+.remove-btn {
+    float: right;
+    color: white;
+}
+
+.list-text {
+    float: left;
+}
+
+/* Different list things */
 
 ul {
     list-style: none;
@@ -87,6 +99,31 @@ ul {
     padding: 10px 40px;
 }
 
+.list_style_transparent li:not(:last-child) {
+    border-bottom: 1px white solid;
+}
+
 .list_style_transparent li .handle {
     color: white;
+}
+
+#play-list-container {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    right: 0.5em;
+    height: 50%;
+    overflow-y: scroll;
+    border: 4px white solid;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+#random-mode-text {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.fa {
+    font-size: 3em;
 }

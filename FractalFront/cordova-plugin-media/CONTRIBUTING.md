@@ -18,19 +18,20 @@
 # under the License.
 #
 -->
-# Release Notes
 
-### 1.0.0 (Mar 25, 2015)
-* CB-8739 added missing license headers
-* Add @Override to CustomConfigXmlParser methods
-* Change ID to cordova-plugin-whitelist rather than reverse-DNS-style
-* Tweak CSP examples in README
-* CB-8660 remove extra commas from package.json
+# Contributing to Apache Cordova
 
-### 1.1.0 (Jun 17, 2015)
-* CB-9128 cordova-plugin-whitelist documentation translation: cordova-plugin-whitelist
-* fix npm md issue
-* Usage of CDVURLRequestFilter protocol.
-* CB-9089 - iOS whitelist plugin does not compile
-* CB-9090 - Enable whitelist plugin for cordova-ios 4.0.0
-* Fixed error in Content-Security-Policy example
+Anyone can contribute to Cordova. And we need your contributions.
+
+There are multiple ways to contribute: report bugs, improve the docs, and
+contribute code.
+
+For instructions on this, start with the 
+[contribution overview](http://cordova.apache.org/#contribute).
+
+The details are explained there, but the important items are:
+ - Sign and submit an Apache ICLA (Contributor License Agreement).
+ - Have a Jira issue open that corresponds to your contribution.
+ - Run the tests so your patch doesn't break existing functionality.
+
+We look forward to your contributions!

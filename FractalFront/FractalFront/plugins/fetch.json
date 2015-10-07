@@ -4,23 +4,21 @@
             "type": "registry",
             "id": "cordova-plugin-file"
         },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "cordova-plugin-whitelist": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/apache/cordova-plugin-whitelist",
-            "subdir": "."
-        },
         "is_top_level": true,
         "variables": {}
     },
     "cordova-plugin-media": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/PiMaker/cordova-plugin-media.git",
-            "subdir": "."
+            "type": "local",
+            "path": "D:\\Dokumente\\GitHubVisualStudio\\Fractal\\FractalFront\\cordova-plugin-media"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "local",
+            "path": "D:\\Dokumente\\GitHubVisualStudio\\Fractal\\FractalFront\\cordova-plugin-whitelist"
         },
         "is_top_level": true,
         "variables": {}

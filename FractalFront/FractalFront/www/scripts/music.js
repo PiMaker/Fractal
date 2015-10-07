@@ -27,5 +27,14 @@
     },
     getFft: function(callback) {
         // TODO
+    },
+    getDuration: function() {
+        return music.audio.duration;
+    },
+    getCurrentTime: function() {
+        return music.audio.currentTime;
+    },
+    setCurrentTime: function(newTime) {
+        music.audio.currentTime = newTime;
     }
 };
