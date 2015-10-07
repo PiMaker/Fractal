@@ -104,10 +104,10 @@
   <platform name="wp8">
     <splash src="res/screens/wp8/SplashScreenImage.jpg" width="480" height="800" />
   </platform>
-  <preference name="KeepRunning" value="False" />
-  <preference name="ShowTitle" value="True" />
-  <preference name="InAppBrowserStorageEnabled" value="False" />
-  <preference name="SuppressesIncrementalRendering" value="True" />
+  <preference name="KeepRunning" value="True" />
+  <preference name="ShowTitle" value="False" />
+  <preference name="InAppBrowserStorageEnabled" value="True" />
+  <preference name="SuppressesIncrementalRendering" value="False" />
   <preference name="EnableViewportScale" value="false" />
   <vs:platformSpecificValues>
     <vs:platformSpecificWidget platformName="windows" id="io.github.pimaker">
@@ -116,5 +116,4 @@
   </vs:platformSpecificValues>
   <access origin="http://*" />
   <access origin="https://*" />
-  <vs:plugin name="cordova-plugin-whitelist" version="1.0.0" />
 </widget>

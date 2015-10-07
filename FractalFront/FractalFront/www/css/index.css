@@ -1,106 +1,92 @@
 ﻿/* Font-Family and... CSS, I guess? */
 html, body, #container {
     font-family: Arial;
-    width: 100%;
     height: 100%;
     overflow: hidden;
+    width: 100%;
 }
 
 /* Stuff */
+
 .maxheight {
     height: 100%;
     overflow-y: scroll;
 }
 
 /* Landscape orientation screen division */
+
 @media (orientation: landscape) {
     .first-half {
+        background-color: #61c0ff;
+        float: left;
         height: 100%;
         width: 50%;
-        float: left;
-        background-color: #61c0ff;
     }
 
     .second-half {
+        background-color: #3498db;
+        float: right;
         height: 100%;
         width: 50%;
-        float: right;
-        background-color: #3498db;
     }
 }
 
 /* Portrait orientation screen division */
+
 @media (orientation: portrait) {
     .first-half {
+        background-color: #61c0ff;
         height: 50%;
         width: 100%;
-        background-color: #61c0ff;
     }
 
     .second-half {
+        background-color: #3498db;
         height: 50%;
         width: 100%;
-        background-color: #3498db;
     }
 }
 
 
+#music-list, #play-list {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 0.2em;
+}
+
+.handle {
+    color: #61c0ff;
+    cursor: move;
+    font-size: 1.5em;
+    padding-right: 0.5em;
+    padding-top: 0.1em;
+}
+
 /* From Sortable.js */
+
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.block {
-	opacity: 1;
-	position: absolute;
+
+.list_style_default li {
+    background-color: #fff;
+    padding: 10px 40px;
 }
-	.block__list {
-		padding: 20px 0;
-		max-width: 360px;
-		margin-top: -8px;
-		margin-left: 5px;
-		background-color: #fff;
-	}
-		.block__list-title {
-			margin: -20px 0 0;
-			padding: 10px;
-			text-align: center;
-			background: #5F9EDF;
-		}
-		.block__list li { cursor: move; }
 
-	.block__list_words li {
-		background-color: #fff;
-		padding: 10px 40px;
-	}
-		.block__list_words .sortable-ghost {
-			opacity: 0.4;
-			background-color: #F4E2C9;
-		}
+.list_style_default .sortable-ghost {
+    background-color: #F4E2C9;
+    opacity: 0.4;
+}
 
-		.block__list_words li:first-letter {
-			text-transform: uppercase;
-		}
+.list_style_transparent li {
+    background-color: transparent;
+    color: white;
+    padding: 10px 40px;
+}
 
-	.block__list_tags {
-		padding-left: 30px;
-	}
-
-	.block__list_tags:after {
-		clear: both;
-		content: '';
-		display: block;
-	}
-		.block__list_tags li {
-			color: #fff;
-			float: left;
-			margin: 8px 20px 10px 0;
-			padding: 5px 10px;
-			min-width: 10px;
-			background-color: #5F9EDF;
-			text-align: center;
-		}
-			.block__list_tags li:first-child:first-letter {
-				text-transform: uppercase;
-			}
+.list_style_transparent li .handle {
+    color: white;
+}

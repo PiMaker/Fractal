@@ -18,13 +18,16 @@
         <!--Main Content Container-->
         <div id="container">
             <!--Visual Half-->
-            <div class="second-half">
-                <canvas id="wave-canvas" width="75" height="40" style="height: 100%; width: 100%;"></canvas>
+            <div class="second-half" style="position: relative;">
+                <canvas id="wave-canvas" width="75" height="40" style="height: 100%; width: 100%; z-index: 1;"></canvas>
+                <!--List-->
+                <ul id="play-list" class="list_style_default list_style_transparent" style="z-index: 2; position: absolute; left: 0; top: 0;">
+                </ul>
             </div>
             <!--List Half-->
             <div class="first-half">
                 <!--List-->
-                <ul id="music-list" class="block__list_words">
+                <ul id="music-list" class="list_style_default">
                 </ul>
             </div>
         </div>
