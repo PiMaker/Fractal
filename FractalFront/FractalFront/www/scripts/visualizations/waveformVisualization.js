@@ -1,9 +1,9 @@
 ﻿var waveformVisualization = {
-    amplitudeMultiplier: 3,
+    amplitudeMultiplier: 1,
     draw: function (canvasCtx) {
         var width = canvasCtx.canvas.width;
         var height = canvasCtx.canvas.height;
-        var height2 = height / 1.32;
+        var height2 = height / 1.43;
 
         music.getWaveForm(function(dataArray) {
             canvasCtx.clearRect(0, 0, width, height);

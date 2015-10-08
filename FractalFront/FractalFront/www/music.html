@@ -21,10 +21,15 @@
         <div id="container">
             <!--Visual Half-->
             <div class="second-half" style="position: relative;">
-                <canvas id="wave-canvas" width="75" height="40" style="height: 100%; width: 100%; z-index: 1;"></canvas>
                 <div id="play-list-container">
                     <!--List-->
                     <ul id="play-list" class="list_style_default list_style_transparent" style="height: 100%; width: 100%; padding: 0; overflow-y: visible;"></ul>
+                </div>
+                <canvas id="wave-canvas" width="75" height="40"></canvas>
+                <div id="control-div">
+                    <i class="fa fa-backward clickable" id="btnBackward" onclick="player.backwardButtonClicked();"></i>
+                    <i class="fa fa-play clickable" id="btnPlayPause" onclick="player.playPauseButtonClicked();"></i>
+                    <i class="fa fa-forward clickable" id="btnForward" onclick="player.forwardButtonClicked();"></i>
                 </div>
             </div>
             <!--List Half-->
@@ -38,11 +43,13 @@
         <!--Scripts-->
         <script src="cordova.js"></script> <!--Reference is added at build time-->
         <script src="scripts/jquery-2.1.4.min.js"></script>
+        <script src="scripts/tether.min.js"></script>
         <script src="scripts/sortable.min.js"></script>
         <script src="scripts/platformOverrides.js"></script> <!--Custom-->
         <script src="scripts/bootstrap.min.js"></script>
         <script src="scripts/music.js"></script> <!--Custom-->
         <script src="scripts/visualizations/waveformVisualization.js"></script> <!--Custom-->
         <script src="scripts/index.js"></script> <!--Custom-->
+        <script src="scripts/player.js"></script> <!--Custom-->
     </body>
 </html>

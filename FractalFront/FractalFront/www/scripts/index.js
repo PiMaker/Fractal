@@ -31,7 +31,13 @@
                 } else {
                     text = musicTitle.ID3Tags.Title + " - " + musicTitle.ID3Tags.JoinedArtists;
                 }
-                $(musicList).append("<li><span class='handle'>☰</span><div class='list-text'>" + text + "</div>").addClass("list-group-item");
+                var newElement = $("<li><span style='display: hidden; visibility:collapse;' class='music-url'>" + musicTitle.URL + "</span><span class='handle'>☰</span><span class='list-text'>" + text + "</span></li>");
+                newElement.addClass("list-group-item");
+                newElement.tooltip({
+                    placement: i == 0 ? "bottom" : "top",
+                    title: text
+                });
+                newElement.appendTo($(musicList));
             }
         }
 
@@ -40,13 +46,7 @@
             group: { name: "music-list-group", pull: "clone", put: false },
             handle: ".handle",
             scroll: true,
-            sort: false,
-            onSort: function (evt) {
-                var item = $(evt.item);
-                if (item.parent().id === musicList.id) {
-                    item.children("button").remove();
-                }
-            }
+            sort: false
         });
 
         var playListJQ = $("#play-list");
@@ -67,7 +67,7 @@
             onSort: function(evt) {
                 updateRandomModeText();
                 var item = $(evt.item);
-                if (item.has("button").length === 0) {
+                if (item.has("button").length === 0 && playListJQ.has(item).length) {
                     var removeBtn = $("<button><i></i></button>");
                     removeBtn.children().first().addClass("fa");
                     removeBtn.children().first().addClass("fa-times");
@@ -79,6 +79,7 @@
                         item.remove();
                         updateRandomModeText();
                     });
+                    item.tooltip("disable");
                 }
             }
         });
