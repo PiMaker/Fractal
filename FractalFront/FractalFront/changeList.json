@@ -127,6 +127,7 @@
     "plugins\\cordova-plugin-file\\www\\requestFileSystem.js",
     "package.json",
     "merges\\android\\css\\platformOverrides.css",
+    "www\\scripts\\tether.min.js",
     "plugins\\cordova-plugin-media\\package.json",
     "plugins\\cordova-plugin-file\\src\\firefoxos\\FileProxy.js",
     "plugins\\cordova-plugin-file\\www\\FileEntry.js",
@@ -135,7 +136,6 @@
     "res\\icons\\windows\\Wide310x150Logo.scale-240.png",
     "res\\icons\\windows\\Wide310x150Logo.scale-100.png",
     "plugins\\cordova-plugin-file\\doc\\zh\\plugins.md",
-    "www\\scripts\\fractalconnection.js",
     "plugins\\cordova-plugin-media\\doc\\pl\\index.md",
     "res\\icons\\ios\\icon-72-2x.png",
     "res\\icons\\ios\\icon-76-2x.png",
@@ -202,6 +202,7 @@
     "plugins\\cordova-plugin-file\\doc\\fr\\plugins.md",
     "plugins\\cordova-plugin-file\\doc\\plugins.md",
     "merges\\windows\\scripts\\platformOverrides.js",
+    "www\\scripts\\player.js",
     "res\\screens\\ios\\screen-iphone-portrait.png",
     "res\\screens\\android\\screen-xhdpi-portrait.png",
     "plugins\\cordova-plugin-media\\src\\wp\\Media.cs",
@@ -283,12 +284,10 @@
     "res\\icons\\windows\\Square44x44Logo.scale-240.png",
     "res\\screens\\android\\screen-mdpi-portrait.png",
     "www\\scripts\\sortable.min.js",
-    "www\\scripts\\visualizations\\waveformvisualization.js",
-    "www\\scripts\\tether.min.js"
+    "www\\scripts\\visualizations\\waveformvisualization.js"
   ],
   "deletedFilesIos": [
-    "www\\scripts\\jquery.dotdotdot.min.js",
-    "www\\scripts\\tether.min.js.txt"
+    "www\\scripts\\fractalconnection.js"
   ],
   "addedPluginsIos": [
     "cordova-plugin-file@3.0.0",
@@ -296,9 +295,7 @@
     "cordova-plugin-whitelist@1.1.1-dev"
   ],
   "deletedPluginsIos": [],
-  "changedFiles": [
-    "www\\css\\index.css"
-  ],
+  "changedFiles": [],
   "deletedFiles": [],
   "addedPlugins": [],
   "deletedPlugins": []

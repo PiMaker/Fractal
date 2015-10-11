@@ -1,5 +1,5 @@
 ﻿var waveformVisualization = {
-    amplitudeMultiplier: 1,
+    amplitudeMultiplier: 0.85,
     draw: function (canvasCtx) {
         var width = canvasCtx.canvas.width;
         var height = canvasCtx.canvas.height;

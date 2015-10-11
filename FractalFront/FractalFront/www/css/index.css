@@ -75,19 +75,19 @@ html, body, #container {
 }
 
 .remove-btn {
-    bottom: 0;
+    bottom: 0.3em;
     color: white;
     position: absolute;
     right: 1em;
-    top: 0;
+    top: 0.3em;
 }
 
 .list-text {
     display: block;
+    margin-top: 0.4em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-top: 0.4em;
 }
 
 /* Different list things */
@@ -113,9 +113,14 @@ ul {
     background-color: transparent;
     color: white;
     padding: 10px 40px;
+    border: none;
 }
 
-.list_style_transparent li:not(:last-child) { border-bottom: 1px white solid; }
+.list_style_transparent li:not(:last-child) {
+    -ms-border-radius: 0;
+    border-bottom: 1px white solid;
+    border-radius: 0;
+}
 
 .list_style_transparent li .handle { color: white; }
 
@@ -123,7 +128,7 @@ ul {
     -ms-border-radius: 10px;
     border: 4px white solid;
     border-radius: 10px;
-    bottom: 11em;
+    bottom: 12em;
     left: 0.5em;
     overflow-y: scroll;
     position: absolute;
@@ -138,6 +143,15 @@ ul {
 }
 
 .fa { font-size: 3em; }
+
+#music-title {
+    position: absolute;
+    bottom: 8em;
+    left: 0.5em;
+    right: 0;
+    color: white;
+    font-size: 1.25em;
+}
 
 /* Controls */
 
@@ -171,4 +185,10 @@ ul {
 #btnForward, #btnBackward {
     font-size: 6em;
     text-align: center;
+}
+
+.music-url {
+    display: none;
+    position: absolute;
+    visibility: collapse;
 }

@@ -42,5 +42,12 @@
     },
     setCurrentTime: function (newTime) {
         music.media.seekTo(newTime * 1000);
+    },
+    setPaused: function (paused) {
+        if (paused) {
+            music.media.pause();
+        } else {
+            music.media.play();
+        }
     }
 };
