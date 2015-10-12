@@ -13,6 +13,14 @@ html, body, #container {
     overflow-y: scroll;
 }
 
+#wave-canvas {
+    bottom: 7em;
+    height: 4em;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+}
+
 /* Landscape orientation screen division */
 
 @media (orientation: landscape) {
@@ -50,9 +58,9 @@ html, body, #container {
 
 #music-list, #play-list {
     height: 100%;
-    width: 100%;
     overflow-y: scroll;
     padding: 0.2em;
+    width: 100%;
 }
 
 /* List items */
@@ -60,19 +68,26 @@ html, body, #container {
 .handle {
     color: #61c0ff;
     cursor: move;
-    font-size: 1.5em;
-    padding-top: -1em;
-    padding-right: 0.5em;
     float: left;
+    font-size: 1.5em;
+    padding-right: 0.5em;
+    padding-top: -1em;
 }
 
 .remove-btn {
-    float: right;
+    bottom: 0.3em;
     color: white;
+    position: absolute;
+    right: 1em;
+    top: 0.3em;
 }
 
 .list-text {
-    float: left;
+    display: block;
+    margin-top: 0.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* Different list things */
@@ -85,6 +100,7 @@ ul {
 
 .list_style_default li {
     background-color: #fff;
+    overflow: hidden;
     padding: 10px 40px;
 }
 
@@ -97,33 +113,82 @@ ul {
     background-color: transparent;
     color: white;
     padding: 10px 40px;
+    border: none;
 }
 
 .list_style_transparent li:not(:last-child) {
+    -ms-border-radius: 0;
     border-bottom: 1px white solid;
+    border-radius: 0;
 }
 
-.list_style_transparent li .handle {
-    color: white;
-}
+.list_style_transparent li .handle { color: white; }
 
 #play-list-container {
-    position: absolute;
-    top: 0.5em;
-    left: 0.5em;
-    right: 0.5em;
-    height: 50%;
-    overflow-y: scroll;
+    -ms-border-radius: 10px;
     border: 4px white solid;
     border-radius: 10px;
+    bottom: 12em;
+    left: 0.5em;
+    overflow-y: scroll;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
     z-index: 10;
 }
 
 #random-mode-text {
-    text-align: center;
     padding-top: 1em;
+    text-align: center;
 }
 
-.fa {
-    font-size: 3em;
+.fa { font-size: 3em; }
+
+#music-title {
+    position: absolute;
+    bottom: 8em;
+    left: 0.5em;
+    right: 0;
+    color: white;
+    font-size: 1.25em;
+}
+
+/* Controls */
+
+#control-div {
+    bottom: 0;
+    height: 7em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 50;
+}
+
+.clickable {
+    color: #ffffff;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.clickable:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.clickable:active { color: #dddddd; }
+
+#btnPlayPause {
+    font-size: 6em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+#btnForward, #btnBackward {
+    font-size: 6em;
+    text-align: center;
+}
+
+.music-url {
+    display: none;
+    position: absolute;
+    visibility: collapse;
 }
