@@ -41,7 +41,8 @@ function connectClick() {
         dataType: "json",
         url: url,
         success: function (data) {
-            window.location = "music.html?d=" + JSON.stringify(data);
+            sessionStorage.d = JSON.stringify(data);
+            window.location = "music.html";
         },
         error: function(error, msg) {
             Ply.dialog("alert", msg + " (" + error.status + ")");

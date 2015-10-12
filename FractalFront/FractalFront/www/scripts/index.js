@@ -21,7 +21,7 @@
 
         // Update list
         var musicList = document.getElementById("music-list");
-        var jsonData = JSON.parse(getParameterByName("d"));
+        var jsonData = JSON.parse(sessionStorage.d);
         for (var i in jsonData) {
             if (jsonData.hasOwnProperty(i)) {
                 var musicTitle = jsonData[i];
