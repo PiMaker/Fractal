@@ -55,14 +55,6 @@ html, body, #container {
     }
 }
 
-
-#music-list, #play-list {
-    height: 100%;
-    overflow-y: scroll;
-    padding: 0.2em;
-    width: 100%;
-}
-
 /* List items */
 
 .handle {
@@ -91,6 +83,13 @@ html, body, #container {
 }
 
 /* Different list things */
+
+#music-list, #play-list {
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 0.6em;
+}
 
 ul {
     list-style: none;
@@ -146,11 +145,15 @@ ul {
 
 #music-title {
     position: absolute;
-    bottom: 8em;
+    bottom: 7.5em;
     left: 0.5em;
     right: 0;
     color: white;
     font-size: 1.25em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
 }
 
 /* Controls */
@@ -177,14 +180,13 @@ ul {
 .clickable:active { color: #dddddd; }
 
 #btnPlayPause {
-    font-size: 6em;
+    font-size: 5.5em;
     padding-left: 0.3em;
     padding-right: 0.3em;
 }
 
 #btnForward, #btnBackward {
-    font-size: 6em;
-    text-align: center;
+    font-size: 5em;
 }
 
 .music-url {

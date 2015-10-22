@@ -1,11 +1,15 @@
-﻿var music = {
+﻿/*var music = {
     media: null,
     finished: null,
     init: function () {
     },
     play: function (url) {
-        music.media = new Media(url, music.finished);
-        music.media.play();
+        music.media = new Media(url, music.finished, null, function (code) {
+            if (code === 1) {
+                music.media.setVolume(1.0);
+                music.media.play();
+            }
+        });
     },
     getWaveForm: function(callback) {
         if (music.media !== null) {
@@ -49,5 +53,9 @@
         } else {
             music.media.play();
         }
+    },
+    setOnFinished: function (newOnFinished) {
+        music.finished = newOnFinished;
+        music.media.successCallback = newOnFinished;
     }
-};
+};*/
