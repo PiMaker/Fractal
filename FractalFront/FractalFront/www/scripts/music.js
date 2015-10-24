@@ -4,7 +4,9 @@
     init: function () {
     },
     play: function (url) {
+        music.media && music.media.release();
         music.media = new Media(url, music.finished);
+        music.media.setVolume(1.0);
         music.media.play();
     },
     getWaveForm: function (callback) {
@@ -33,7 +35,7 @@
     getCurrentTime: function () {
         var temp = -16;
         music.media.getCurrentPosition(function (millis) {
-            temp = millis / 1000.0;
+            temp = millis;
         }, function () {
             temp = 0;
         });
@@ -49,6 +51,10 @@
         } else {
             music.media.play();
         }
+    },
+    setOnFinished: function (newOnFinished) {
+        music.finished = newOnFinished;
+        music.media.successCallback = newOnFinished;
     }
 };
 
@@ -114,5 +120,9 @@
         } else {
             music.audio.play();
         }
+    },
+    setOnFinished: function (newOnFinished) {
+        music.finished = newOnFinished;
+        music.audio.onended = newOnFinished;
     }
 };*/

@@ -2,7 +2,7 @@
     state: "stopped", // Can be "stopped", "playing" or "paused"
     playedList: [],
     init: function() {
-        music.finished = player.chooseNext;
+       music.setOnFinished(player.chooseNext);
     },
     playPauseButtonClicked: function () {
         var url = "";

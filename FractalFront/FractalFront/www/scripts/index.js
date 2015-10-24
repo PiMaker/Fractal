@@ -29,7 +29,7 @@ function onDeviceReady() {
 
     // Update list
     var musicList = document.getElementById("music-list");
-    var jsonData = JSON.parse(getParameterByName("d"));
+    var jsonData = JSON.parse(sessionStorage.jsonData);
     for (var i in jsonData) {
         if (jsonData.hasOwnProperty(i)) {
             var musicTitle = jsonData[i];
@@ -44,7 +44,7 @@ function onDeviceReady() {
             var newElement = $("<li><span class='handle'>☰</span><span class='list-text'>" + text + "</span><span class='music-url'>" + musicTitle.URL + "</span></li>");
             newElement.addClass("list-group-item");
             newElement.tooltip({
-                placement: i == 0 ? "bottom" : "top",
+                placement: i === 0 ? "bottom" : "top",
                 title: text
             });
             newElement.appendTo($(musicList));
