@@ -33,10 +33,6 @@ var tempFolderAppDataBasePath = 'ms-appdata:///temp/',
 var PARAMETER_IS_INCORRECT = -2147024809;
 var SUPPORTED_EXTENSIONS = ['.mp3', '.wma', '.wav', '.cda', '.adx', '.wm', '.m3u', '.wmx', '.m4a'];
 
-var CONTEXT = new (window.AudioContext || window.webkitAudioContext)();
-var ANALYSER = CONTEXT.createAnalyser();
-ANALYSER.connect(CONTEXT.destination);
-
 module.exports = {
     mediaCaptureMrg:null,
 
@@ -90,27 +86,10 @@ module.exports = {
                 thisM.node.onended = function () {
                     Media.onStatus(id, Media.MEDIA_STATE, Media.MEDIA_STOPPED);
                 };
-
-                var sourceNode = CONTEXT.createMediaElementSource(thisM.node);
-                sourceNode.connect(ANALYSER);
             }
         }
 
         return true; // successfully created
-    },
-
-    getWaveForm:function(win, lose, args) {
-        var bufferLength = ANALYSER.frequencyBinCount;
-        var dataArray = new Uint8Array(bufferLength);
-        ANALYSER.getByteTimeDomainData(dataArray);
-        win(dataArray);
-    },
-
-    getFft: function (win, lose, args) {
-        var bufferLength = ANALYSER.frequencyBinCount;
-        var dataArray = new Uint8Array(bufferLength);
-        ANALYSER.getByteFrequencyData(dataArray);
-        win(dataArray);
     },
 
     // Start playing the audio

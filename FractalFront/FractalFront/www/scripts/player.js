@@ -5,6 +5,7 @@
        music.setOnFinished(player.chooseNext);
     },
     playPauseButtonClicked: function () {
+        console.log("Play/Pause button clicked. Current state: " + player.state);
         var url = "";
         if (player.state === "playing") {
             music.setPaused(true);
@@ -26,6 +27,7 @@
             player.state = "playing";
         }
 
+        console.log("-> New State: " + player.state);
         player.setGUIBasedOnState(url);
     },
     forwardButtonClicked: function() {
@@ -41,7 +43,8 @@
             player.setGUIBasedOnState();
         }
     },
-    chooseNext: function() {
+    chooseNext: function () {
+        console.log("Choosing next track");
         player.state = "stopped";
         player.playPauseButtonClicked();
     },
@@ -64,6 +67,7 @@
         return allUrls[Math.floor(Math.random() * allUrls.length)];
     },
     setGUIBasedOnState: function (url) {
+        console.log("Setting GUI based on state...");
         var btn = $("#btnPlayPause");
         btn.removeClass("fa-pause");
         btn.removeClass("fa-play");
@@ -79,5 +83,6 @@
             }).first().parent().find(".list-text").first().text();
             $("#music-title").text(text);
         }
+        console.log("-> Done");
     }
 };

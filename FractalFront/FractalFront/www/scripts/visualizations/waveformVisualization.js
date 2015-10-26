@@ -8,12 +8,17 @@ var every = function (arr, func) {
 
 var waveformVisualization = {
     amplitudeMultiplier: 0.8,
+    position: 0,
     draw: function (canvasCtx) {
+        waveformVisualization.position = 0;
+        music.getCurrentTime(function (v) {
+            waveformVisualization.position = v;
+        });
+
         var width = canvasCtx.canvas.width;
         var height = canvasCtx.canvas.height;
         var height2 = height / 1.43;
-
-        music.getWaveForm(function(dataArray) {
+        music.getWaveForm(function (dataArray) {
             canvasCtx.clearRect(0, 0, width, height);
 
             if (every(dataArray, is0)) return;
@@ -21,11 +26,13 @@ var waveformVisualization = {
             var duration = music.getDuration();
             var position = 99999999;
             if (duration > 0) {
-                position = (music.getCurrentTime() / duration) * dataArray.length;
+                position = (waveformVisualization.position / duration) * dataArray.length;
+                canvasCtx.strokeStyle = "#d35400";
+            } else {
+                canvasCtx.strokeStyle = "#ecf0f1";
             }
 
             canvasCtx.lineWidth = 1;
-            canvasCtx.strokeStyle = "#d35400";
 
             canvasCtx.beginPath();
 

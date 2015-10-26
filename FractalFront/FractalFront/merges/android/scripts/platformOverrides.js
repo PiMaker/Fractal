@@ -7,6 +7,8 @@
     } else {
         document.head.appendChild(scriptElem);
     }
+
+    waveformVisualization && (waveformVisualization.amplitudeMultiplier = 0.25);
 }());
 
 every = function (arr, func) {
