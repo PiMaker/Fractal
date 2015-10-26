@@ -25,6 +25,7 @@ function onDeviceReady() {
     var canvas = document.getElementById("wave-canvas");
 
     music.init();
+    player.init();
     waveformVisualization.beginRendering(canvas);
 
     // Update list

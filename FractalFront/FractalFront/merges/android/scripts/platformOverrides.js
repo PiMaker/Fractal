@@ -8,3 +8,11 @@
         document.head.appendChild(scriptElem);
     }
 }());
+
+every = function (arr, func) {
+    var l = arr.length;
+    for (var i = 0; i < l; i++) {
+        if (!func(arr[i])) return false;
+    }
+    return true;
+}
