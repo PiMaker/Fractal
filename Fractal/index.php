@@ -18,7 +18,7 @@ if ($config["enforce-ssl"] && $_SERVER["HTTPS"] != "on") {
 
 // Check for password
 if ($config["password"] == "") {
-    redirect("music.php"); // Exits the script and loads Fractal if there is no password specified
+    redirect("music.getID3"); // Exits the script and loads Fractal if there is no password specified
 }
 
 ?>
