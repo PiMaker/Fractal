@@ -7,7 +7,7 @@ if (temp !== undefined && temp !== "") {
 function connectClick() {
     var pass = $("#inputPassword").val();
 
-    if ($("#chkPassword").val() === "remember-password") {
+    if (document.getElementById('chkPassword').checked) {
         window.localStorage.setItem("password", pass);
     } else {
         window.localStorage.setItem("password", undefined);
