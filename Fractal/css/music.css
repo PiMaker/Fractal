@@ -1,6 +1,6 @@
 ﻿/* Font-Family and... CSS, I guess? */
 html, body, #container {
-    font-family: Arial sans-serif;
+    font-family: Arial;
     height: 100%;
     overflow: hidden;
     width: 100%;

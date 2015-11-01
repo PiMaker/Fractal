@@ -12,14 +12,25 @@ function updateRandomModeText() {
 var randomModeText = "Random playlist, drag songs here to create your own";
 playListJQ.append("<li id='random-mode-text'>" + randomModeText);
 
+if (sessionStorage.getItem("fractal-pass") == undefined) {
+    sessionStorage.setItem("fractal-pass", "");
+}
+
 $(function () {
     // Page has been loaded.
 
     // Clock
     var clockElement = $("#clock");
+    function prettyPrint(number) {
+        var s = number + "";
+        while (s.length < 2) {
+            s = "0" + s;
+        }
+        return s;
+    }
     function clock() {
         var currentDate = new Date();
-        clockElement.text(currentDate.getHours() + ":" + currentDate.getMinutes());
+        clockElement.text(prettyPrint(currentDate.getHours()) + ":" + prettyPrint(currentDate.getMinutes()));
         setTimeout(clock, 1);
     }
     clock();
@@ -135,7 +146,7 @@ function deleteButton() {
         .done(function (ui) {
             $.ajax({
                 dataType: "json",
-                url: "api.php?password=" + sha256(sessionStorage.getItem("fractal-pass")) + "&action=delete&item=" + encodeURIComponent(filename),
+                url: "api.php?password=" + sessionStorage.getItem("fractal-pass") + "&action=delete&item=" + encodeURIComponent(filename),
                 success: function (data) {
                     if (data.success == "deleted") {
                         $(".music-url").filter(function (el) {

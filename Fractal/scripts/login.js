@@ -30,7 +30,7 @@ function connectClick() {
         url: "api.php?action=login&password=" + shaPass,
         success: function (data) {
             if (data.success == 1) {
-                sessionStorage.setItem("fractal-pass", pass);
+                sessionStorage.setItem("fractal-pass", shaPass);
                 window.location = "music.php?password=" + shaPass;
             } else {
                 Ply.dialog("alert", data.error);
