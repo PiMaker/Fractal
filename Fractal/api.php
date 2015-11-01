@@ -17,6 +17,20 @@ if ($_GET["action"] == "login") {
     } else {
         die('{"error": "Invalid password."}');
     }
+} elseif ($_GET["action"] == "delete") {
+    if (auth()) {
+        if ($config["allow-modify"]) {
+            if (unlink("music/" . $_GET["item"])) {
+                die('{"success": "deleted"}');
+            } else {
+                die('{"error": "File could not be deleted."}');
+            }
+        } else {
+            die('{"error": "Modifications are not allowed. To enable, set allow-modify to true in config.php."}');
+        }
+    } else {
+        die('{"error": "Not authenticated."}');
+    }
 } else {
     die("Unknown action.");
 }

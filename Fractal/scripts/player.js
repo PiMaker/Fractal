@@ -4,6 +4,12 @@
     init: function () {
         music.setOnFinished(player.chooseNext);
     },
+    playUrl: function (url) {
+        music.play(url);
+        player.playedList.push(url);
+        player.state = "playing";
+        player.setGUIBasedOnState(url);
+    },
     playPauseButtonClicked: function () {
         var url = "";
         if (player.state === "playing") {
@@ -58,13 +64,19 @@
         return url;
     },
     chooseRandomSongUrl: function () {
-        var toRet = music.audio.src;
-        while (toRet === music.audio.src) {
+        console.log("Choosing random song...");
+        var toRet = "/" + decodeURIComponent(music.audio.src.replace(/^(?:\/\/|[^\/]+)*\//, ""));
+        var oldSrc = toRet;
+        console.log("Initial: " + toRet);
+        while (toRet === oldSrc) {
+            console.log("Generating...");
             var allUrls = $("#music-list").find("li .music-url").map(function () {
                 return $(this).text();
             }).toArray();
             toRet = allUrls[Math.floor(Math.random() * allUrls.length)];
+            console.log("New: " + toRet);
         }
+        console.log("Returning found value.");
         return toRet;
     },
     setGUIBasedOnState: function (url) {

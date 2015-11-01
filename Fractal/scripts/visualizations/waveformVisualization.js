@@ -63,6 +63,9 @@
         canvas.onmouseout = function () {
             waveformVisualization.mousePos = {x: 0, y: 0};
         };
+        canvas.onmousedown = function () {
+            music.setCurrentTime(waveformVisualization.mousePos.x / (canvas.width / music.getDuration()));
+        };
         var canvasCtx = canvas.getContext("2d", {antialias: false});
         canvasCtx.clearRect(0, 0, canvas.width, canvas.height);
         waveformVisualization.rendering = true;
@@ -76,7 +79,8 @@
     stopRendering: function () {
         waveformVisualization.rendering = false;
         waveformVisualization.canvas.onmousemove = undefined;
-        waveformVisualization.ca.onmouseout = undefined;
+        waveformVisualization.canvas.onmouseout = undefined;
+        waveformVisualization.canvas.onmousedown = undefined;
     },
     mouseSet: function (evt) {
         var rect = waveformVisualization.canvas.getBoundingClientRect();

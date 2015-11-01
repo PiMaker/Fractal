@@ -17,7 +17,7 @@ return array(
     // The website title. This will be displayed in most browsers as a tab name and as a default favourite title.
     "title" => "Fractal",
 
-    // Change to true/false depending on whether you want to allow modifications to your music library through the
-    // Fractal music applications web interface.
+    // Change to true/false depending on whether you want to allow modifications (adding and removing files) to your
+    // music library through the Fractal Music Applications web interface.
     "allow-modify" => true
 );

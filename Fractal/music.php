@@ -19,17 +19,29 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
           content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
 
     <!--Title-->
-    <title>Fractal</title>
+    <title><? echo($config["title"]); ?></title>
 
     <!--CSS Links-->
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link href="css/music.css" rel="stylesheet"/>
     <link href="css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/platformOverrides.css" rel="stylesheet"/>
+    <link href="css/ply.css" rel="stylesheet"/>
     <style>:focus {
             outline: none !important;
         }</style>
     <link href="css/text.css" rel="stylesheet"/>
+
+    <script>var allowModify = <?
+        if ($config["allow-modify"])
+        {
+            echo("1");
+        }
+        else
+        {
+            echo("0");
+        }
+    ?>;</script>
 
     <!--PHP-Generated music data-->
     <script>var musicData = {
@@ -72,7 +84,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
                                 $fileInfo = $getID3->analyze("music/".$file);
                                 getid3_lib::CopyTagsToComments($fileInfo);
                                 foreach ($fileInfo["comments_html"] as $tag => $tagvalue) {
-                                    echo($tag.":'".implode(" & ", str_replace("'", '"', $tagvalue))."',");
+                                    echo($tag.':"'.implode(" & ", str_replace('"', "'", $tagvalue)).'",');
                                 }
 
                                 echo("}");
@@ -109,11 +121,17 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
         <!--List-->
         <ul id="music-list" class="list_style_default">
         </ul>
+        <div class="footer">
+            <p class="small"><span id="clock"></span> - Fractal Music Streaming Platform - An Open Source Project by PiMaker - GitHub: <a href="https://github.com/PiMaker/Fractal/">https://github.com/PiMaker/Fractal/</a> - Uses getID3 from <a href="http://getid3.sourceforge.net/">http://getid3.sourceforge.net/</a></p>
+            <a class="btn btn-info" id="btnUpload"><i class="fa fa-plus"></i></a>
+        </div>
     </div>
 </div>
 
 <!--Scripts-->
 <script src="scripts/jquery-2.1.4.min.js"></script>
+<script src="scripts/ply.min.js"></script>
+<script src="scripts/sha256.min.js"></script>
 <script src="scripts/tether.min.js"></script>
 <script src="scripts/sortable.min.js"></script>
 <script src="scripts/bootstrap.min.js"></script>

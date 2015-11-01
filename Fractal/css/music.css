@@ -1,6 +1,6 @@
 ﻿/* Font-Family and... CSS, I guess? */
 html, body, #container {
-    font-family: Arial;
+    font-family: Arial sans-serif;
     height: 100%;
     overflow: hidden;
     width: 100%;
@@ -19,6 +19,30 @@ html, body, #container {
     position: absolute;
     width: 100%;
     z-index: 0;
+}
+
+.first-half {
+    display: flex;
+    flex-flow: column;
+}
+
+.footer {
+    padding: 0.6em 0.6em 0 1.2em;
+    display: flex;
+    flex-flow: row;
+}
+
+.footer p {
+    flex: 1 1 auto;
+    padding-top: 0.7em;
+}
+
+#btnUpload {
+    flex: 1 1 auto;
+    max-width: 3em;
+    background-color: white;
+    color: #3498db;
+    margin-bottom: 0.35em;
 }
 
 /* Landscape orientation screen division */
@@ -85,10 +109,17 @@ html, body, #container {
 /* Different list things */
 
 #music-list, #play-list {
-    height: 100%;
     overflow-y: scroll;
-    width: 100%;
     padding: 0.6em;
+}
+
+#play-list {
+    height: 100%;
+    width: 100%;
+}
+
+#music-list {
+    flex: 1 1 auto;
 }
 
 ul {
@@ -195,7 +226,7 @@ ul {
     font-size: 5em;
 }
 
-.music-url {
+.music-url, .music-filename {
     display: none;
     position: absolute;
     visibility: collapse;

@@ -4,12 +4,16 @@
     audio: null,
     finished: null,
     bufferLength: null,
+    source: null,
     init: function () {
         try {
             music.context = new (window.AudioContext || window.webkitAudioContext)();
             music.analyser = music.context.createAnalyser();
             music.bufferLength = music.analyser.frequencyBinCount;
             music.audio = new Audio();
+            music.source = music.context.createMediaElementSource(music.audio);
+            music.source.connect(music.analyser);
+            music.analyser.connect(music.context.destination);
         } catch (e) {
             alert("Web Audio API is not supported on this platform. Music can't be played. Consider using a different browser.");
         }
@@ -19,9 +23,6 @@
         music.audio.src = url;
         music.audio.volume = 1.0;
         music.audio.onended = music.finished;
-        var source = music.context.createMediaElementSource(music.audio);
-        source.connect(music.analyser);
-        music.analyser.connect(music.context.destination);
         music.audio.play();
     },
     getWaveForm: function (callback) {

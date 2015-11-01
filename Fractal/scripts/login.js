@@ -37,7 +37,7 @@ function connectClick() {
                 $("body").waitMe("hide");
             }
         },
-        error: function (error, msg) {
+        error: function (error, nothing, msg) {
             if (error.status === 0) {
                 msg = "Connection lost.";
             }
