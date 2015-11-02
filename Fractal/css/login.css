@@ -1,6 +1,5 @@
 ﻿body {
     background-color: #61c0ff;
-    padding-bottom: 40px;
     padding-top: 40px;
 }
 
@@ -35,4 +34,13 @@
 
 .form-signin input[type="password"] {
     margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #61c0ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
 }

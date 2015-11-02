@@ -51,7 +51,6 @@ if ($config["password"] == "") {
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password"
                onkeydown="if (event.keyCode === 13) document.getElementById('btnConnect').click()" autofocus>
-
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="remember-password" id="chkPassword"> Remember password (unencrypted!)
@@ -60,6 +59,9 @@ if ($config["password"] == "") {
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="button" id="btnConnect">Login</button>
     </form>
+    <footer class="footer">
+        <p>Fractal Music Streaming Platform - An Open Source Project by PiMaker - GitHub: <a href="https://github.com/PiMaker/Fractal/">https://github.com/PiMaker/Fractal/</a> - Uses getID3 from <a href="http://getid3.sourceforge.net/">http://getid3.sourceforge.net/</a></p>
+    </footer>
 </div>
 <!-- /container -->
 

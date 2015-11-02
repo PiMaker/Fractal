@@ -13,7 +13,7 @@ var randomModeText = "Random playlist, drag songs here to create your own";
 playListJQ.append("<li id='random-mode-text'>" + randomModeText);
 
 if (sessionStorage.getItem("fractal-pass") == undefined) {
-    sessionStorage.setItem("fractal-pass", "");
+    sessionStorage.setItem("fractal-pass", sha256(""));
 }
 
 $(function () {
@@ -37,7 +37,7 @@ $(function () {
 
     $("#music-list").scrollTop = 0; // Force scroll bar to show
 
-    $("#btnUpload").attr("href", "upload?password=" + sessionStorage.getItem("fractal-pass"));
+    $("#btnUpload").attr("href", "upload/index.php?password=" + sessionStorage.getItem("fractal-pass"));
 
     var canvas = document.getElementById("wave-canvas");
 

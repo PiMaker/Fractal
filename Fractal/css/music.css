@@ -30,6 +30,7 @@ html, body, #container {
     padding: 0.6em 0.6em 0 1.2em;
     display: flex;
     flex-flow: row;
+    border-top: solid white 1px;
 }
 
 .footer p {
@@ -104,6 +105,7 @@ html, body, #container {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin-right: 5em;
 }
 
 /* Different list things */
@@ -200,6 +202,12 @@ ul {
     text-align: center;
     width: 100%;
     z-index: 50;
+}
+
+@media (max-width: 600px) or (max-height: 600px) {
+    #control-div {
+        font-size: 70%;
+    }
 }
 
 .clickable {

@@ -122,7 +122,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
         <ul id="music-list" class="list_style_default">
         </ul>
         <div class="footer">
-            <p class="small"><span id="clock"></span> - Fractal Music Streaming Platform - An Open Source Project by PiMaker - GitHub: <a href="https://github.com/PiMaker/Fractal/">https://github.com/PiMaker/Fractal/</a> - Uses getID3 from <a href="http://getid3.sourceforge.net/">http://getid3.sourceforge.net/</a></p>
+            <p class="small"><? echo($config["title"]) ?>&nbsp;-&nbsp;<span id="clock"></span></p>
             <a class="btn btn-info" id="btnUpload"><i class="fa fa-plus"></i></a>
         </div>
     </div>
