@@ -27,6 +27,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
     <link href="css/font-awesome.min.css" rel="stylesheet"/>
     <link href="css/platformOverrides.css" rel="stylesheet"/>
     <link href="css/ply.css" rel="stylesheet"/>
+    <link href="css/bootstrap-slider.min.css" rel="stylesheet">
     <style>:focus {
             outline: none !important;
         }</style>
@@ -83,8 +84,11 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
                                 // Analyze file for ID3-Tags
                                 $fileInfo = $getID3->analyze("music/".$file);
                                 getid3_lib::CopyTagsToComments($fileInfo);
-                                foreach ($fileInfo["comments_html"] as $tag => $tagvalue) {
-                                    echo($tag.':"'.implode(" & ", str_replace('"', "'", $tagvalue)).'",');
+                                if (isset($fileInfo["comments_html"]))
+                                {
+                                    foreach ($fileInfo["comments_html"] as $tag => $tagvalue) {
+                                        echo($tag.':"'.implode(" & ", str_replace('"', "'", $tagvalue)).'",');
+                                    }
                                 }
 
                                 echo("}");
@@ -114,6 +118,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
             <i class="fa fa-backward clickable" id="btnBackward" onclick="player.backwardButtonClicked();"></i>
             <i class="fa fa-play clickable" id="btnPlayPause" onclick="player.playPauseButtonClicked();"></i>
             <i class="fa fa-forward clickable" id="btnForward" onclick="player.forwardButtonClicked();"></i>
+            <input id="volumeSlider" data-slider-id='volumeSlider_id' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="100"/>
         </div>
     </div>
     <!--List Half-->
@@ -135,6 +140,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
 <script src="scripts/tether.min.js"></script>
 <script src="scripts/sortable.min.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/bootstrap-slider.min.js"></script>
 <script src="scripts/music.js"></script>
 <!--Custom-->
 <script src="scripts/visualizations/waveformVisualization.js"></script>

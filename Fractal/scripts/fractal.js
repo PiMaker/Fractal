@@ -35,6 +35,12 @@ $(function () {
     }
     clock();
 
+    $('#volumeSlider').slider({
+        formatter: function(value) {
+            return value + "/100";
+        }
+    });
+
     $("#music-list").scrollTop = 0; // Force scroll bar to show
 
     $("#btnUpload").attr("href", "upload/index.php?password=" + sessionStorage.getItem("fractal-pass"));

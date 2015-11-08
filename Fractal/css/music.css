@@ -204,15 +204,33 @@ ul {
     z-index: 50;
 }
 
-@media (max-width: 600px) or (max-height: 600px) {
+@media (max-width: 600px) {
     #control-div {
         font-size: 70%;
     }
 }
 
+#volumeSlider_id {
+    position: absolute;
+    right: 2em;
+    bottom: 2em;
+    top: 2em;
+    width: 4em;
+    margin-top: 0.3em;
+}
+
+@media (max-width: 1000px) {
+    #volumeSlider_id {
+        left: 50%;
+        bottom: 0.1em;
+        top: auto;
+        margin-left: -2em;
+    }
+}
+
 .clickable {
     color: #ffffff;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .clickable:hover {
