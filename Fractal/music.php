@@ -119,6 +119,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
             <i class="fa fa-play clickable" id="btnPlayPause" onclick="player.playPauseButtonClicked();"></i>
             <i class="fa fa-forward clickable" id="btnForward" onclick="player.forwardButtonClicked();"></i>
             <input id="volumeSlider" data-slider-id='volumeSlider_id' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="100"/>
+            <button id="btnShowList" class="btn btn-primary"><i class="fa fa-arrow-circle-up" onclick="alert('TODO');"></i></button>
         </div>
     </div>
     <!--List Half-->

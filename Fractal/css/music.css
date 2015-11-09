@@ -36,6 +36,7 @@ html, body, #container {
 .footer p {
     flex: 1 1 auto;
     padding-top: 0.7em;
+    color: white;
 }
 
 #btnUpload {
@@ -44,6 +45,23 @@ html, body, #container {
     background-color: white;
     color: #3498db;
     margin-bottom: 0.35em;
+}
+
+#btnShowList {
+    display: none;
+    visibility: collapse;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+    max-height: 4em;
+    max-width: 4em;
+}
+
+@media all and (max-device-width: 768px) {
+    #btnShowList {
+        display: block;
+        visibility: visible;
+    }
 }
 
 /* Landscape orientation screen division */
@@ -62,6 +80,18 @@ html, body, #container {
         height: 100%;
         width: 50%;
     }
+
+    /* Responsive...ness...ness? */
+    @media all and (max-device-width: 768px) {
+        .first-half {
+            width: 0;
+            display: none;
+        }
+
+        .second-half {
+            width: 100%;
+        }
+    }
 }
 
 /* Portrait orientation screen division */
@@ -77,6 +107,18 @@ html, body, #container {
         background-color: #3498db;
         height: 50%;
         width: 100%;
+    }
+
+    /* Responsive...ness...ness? */
+    @media all and (max-device-width: 768px) {
+        .first-half {
+            height: 0;
+            display: none;
+        }
+
+        .second-half {
+            height: 100%;
+        }
     }
 }
 
@@ -206,7 +248,7 @@ ul {
 
 @media (max-width: 600px) {
     #control-div {
-        font-size: 70%;
+        font-size: 90%;
     }
 }
 
@@ -215,22 +257,23 @@ ul {
     right: 2em;
     bottom: 2em;
     top: 2em;
-    width: 4em;
+    width: 6em;
     margin-top: 0.3em;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     #volumeSlider_id {
         left: 50%;
         bottom: 0.1em;
         top: auto;
-        margin-left: -2em;
+        margin-left: -3em;
     }
 }
 
 .clickable {
     color: #ffffff;
     color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 0.25em;
 }
 
 .clickable:hover {

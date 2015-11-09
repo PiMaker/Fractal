@@ -19,6 +19,15 @@
                 canvasCtx.strokeStyle = "#ecf0f1";
             }
 
+            var ampMul = waveformVisualization.amplitudeMultiplier;
+            if (music.audio) {
+                if (music.audio.volume > 0.05) {
+                    ampMul /= music.audio.volume;
+                } else {
+                    ampMul = 0;
+                }
+            }
+
             canvasCtx.lineWidth = 1;
 
             canvasCtx.beginPath();
@@ -35,16 +44,16 @@
                 if (i > position) {
                     canvasCtx.stroke();
                     canvasCtx.beginPath();
-                    canvasCtx.moveTo(x, height2 + ydiff * waveformVisualization.amplitudeMultiplier);
+                    canvasCtx.moveTo(x, height2 + ydiff * ampMul);
                     canvasCtx.strokeStyle = "#ecf0f1";
                     position = 99999999;
                     continue;
                 }
 
                 if (i === 0) {
-                    canvasCtx.moveTo(x, height2 + ydiff * waveformVisualization.amplitudeMultiplier);
+                    canvasCtx.moveTo(x, height2 + ydiff * ampMul);
                 } else {
-                    canvasCtx.lineTo(x, height2 + ydiff * waveformVisualization.amplitudeMultiplier);
+                    canvasCtx.lineTo(x, height2 + ydiff * ampMul);
                 }
 
                 x += sliceWidth;

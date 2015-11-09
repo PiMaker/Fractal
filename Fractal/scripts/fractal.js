@@ -35,9 +35,15 @@ $(function () {
     }
     clock();
 
-    $('#volumeSlider').slider({
+    var volumeSlider = $('#volumeSlider');
+    volumeSlider.slider({
         formatter: function(value) {
             return value + "/100";
+        }
+    });
+    volumeSlider.on("change", function (val) {
+        if (music.audio) {
+            music.audio.volume = val.value.newValue / 100.0;
         }
     });
 

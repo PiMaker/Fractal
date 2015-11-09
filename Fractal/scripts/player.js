@@ -64,19 +64,14 @@
         return url;
     },
     chooseRandomSongUrl: function () {
-        console.log("Choosing random song...");
         var toRet = "/" + decodeURIComponent(music.audio.src.replace(/^(?:\/\/|[^\/]+)*\//, ""));
         var oldSrc = toRet;
-        console.log("Initial: " + toRet);
         while (toRet === oldSrc) {
-            console.log("Generating...");
             var allUrls = $("#music-list").find("li .music-url").map(function () {
                 return $(this).text();
             }).toArray();
             toRet = allUrls[Math.floor(Math.random() * allUrls.length)];
-            console.log("New: " + toRet);
         }
-        console.log("Returning found value.");
         return toRet;
     },
     setGUIBasedOnState: function (url) {
