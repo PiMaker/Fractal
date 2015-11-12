@@ -16,11 +16,17 @@ if (sessionStorage.getItem("fractal-pass") == undefined) {
     sessionStorage.setItem("fractal-pass", sha256(""));
 }
 
+var deviceWidth = 0;
+$(window).bind('resize', function () {
+    deviceWidth = $('[data-role="page"]').first().width();
+}).trigger("resize");
+
 $(function () {
     // Page has been loaded.
 
     // Clock
     var clockElement = $("#clock");
+
     function prettyPrint(number) {
         var s = number + "";
         while (s.length < 2) {
@@ -28,16 +34,19 @@ $(function () {
         }
         return s;
     }
+
     function clock() {
         var currentDate = new Date();
-        clockElement.text(prettyPrint(currentDate.getHours()) + ":" + prettyPrint(currentDate.getMinutes()));
+        clockElement.text(prettyPrint(currentDate.getHours()) + ":" + prettyPrint(currentDate.getMinutes())
+            + (deviceWidth <= 768 ? " - Tap elements to add to playlist" : ""));
         setTimeout(clock, 1);
     }
+
     clock();
 
     var volumeSlider = $('#volumeSlider');
     volumeSlider.slider({
-        formatter: function(value) {
+        formatter: function (value) {
             return value + "/100";
         }
     });
@@ -46,6 +55,16 @@ $(function () {
             music.audio.volume = val.value.newValue / 100.0;
         }
     });
+
+    window.onresize = function () {
+        if (deviceWidth > 768) {
+            //noinspection JSValidateTypes
+            document.getElementById("first-half-div").style = "";
+            //noinspection JSValidateTypes
+            document.getElementById("second-half-div").style = "position: relative;";
+            isListHidden = true;
+        }
+    };
 
     $("#music-list").scrollTop = 0; // Force scroll bar to show
 
@@ -73,6 +92,13 @@ $(function () {
             var newElement = $("<li><span class='handle'>☰</span><span class='list-text'>" + text + "</span><span class='music-filename'>" + musicTitle.Filename + "</span><span class='music-url'>" + musicTitle.URL + "</span></li>");
             newElement.addClass("list-group-item");
 
+            newElement.find(".list-text").onclick = function () {
+                if (deviceWidth <= 768) {
+                    newElement.css("background-color", "#3498db")
+                        .animate({ backgroundColor: "#FFFFFF"}, 1500); // TODO!
+                }
+            };
+
             var playBtn = $('<button><i style="color: white;"></i></button>');
             playBtn.children().first().addClass("fa");
             playBtn.children().first().addClass("fa-play");
@@ -83,7 +109,7 @@ $(function () {
             playBtn.on("click", playButton);
 
             if (allowModify === 1) {
-                var removeBtn = $('<button style="right: 4.5em !important;"><i style="color: white;"></i></button>');
+                var removeBtn = $('<button style="right: 4.5em;" class="btn-remove-left"><i style="color: white;"></i></button>');
                 removeBtn.children().first().addClass("fa");
                 removeBtn.children().first().addClass("fa-times");
                 removeBtn.appendTo(newElement);
@@ -105,18 +131,16 @@ $(function () {
         handle: ".handle",
         scroll: true,
         sort: false,
-        onSort: function(evt) {
+        onSort: function (evt) {
             // Reset button events
-            $(musicList).find("button").each(function() {
+            $(musicList).find("button").each(function () {
                 var el = $(this);
                 el.off("click");
-                if (el.find("i").first().is(".fa-times"))
-                {
+                if (el.find("i").first().is(".fa-times")) {
                     // Remove button
                     el.on("click", deleteButton);
                 }
-                else
-                {
+                else {
                     // Play button
                     el.on("click", playButton);
                 }
@@ -180,4 +204,34 @@ function deleteButton() {
 
 function playButton() {
     player.playUrl($(this).parent().find(".music-url").first().text());
+}
+
+var isListHidden = true;
+var animationDuration = 300;
+
+function showList() {
+    var list = $(".first-half");
+    var visual = $(".second-half");
+
+    if (isListHidden) {
+        isListHidden = false;
+        list.css("display", "block");
+        list.animate({height: "100%"}, {
+            duration: animationDuration,
+            complete: function () {
+                visual.css("display", "none");
+            }
+        });
+        visual.animate({height: "0%"}, {duration: animationDuration});
+    } else {
+        isListHidden = true;
+        visual.css("display", "block");
+        list.animate({height: "0%"}, {
+            duration: animationDuration,
+            complete: function () {
+                list.css("display", "none");
+            }
+        });
+        visual.animate({height: "100%"}, {duration: animationDuration});
+    }
 }

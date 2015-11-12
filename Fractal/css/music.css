@@ -47,6 +47,16 @@ html, body, #container {
     margin-bottom: 0.35em;
 }
 
+#btnHideList {
+    display: none;
+    visibility: collapse;
+    flex: 1 1 auto;
+    max-width: 3em;
+    background-color: white;
+    margin-bottom: 0.35em;
+    color: #3498db;
+}
+
 #btnShowList {
     display: none;
     visibility: collapse;
@@ -57,10 +67,36 @@ html, body, #container {
     max-width: 4em;
 }
 
+.remove-btn {
+    bottom: 0.3em;
+    color: white;
+    position: absolute;
+    right: 1em;
+    top: 0.3em;
+}
+
 @media all and (max-device-width: 768px) {
-    #btnShowList {
+    #btnShowList, #btnHideList {
         display: block;
         visibility: visible;
+    }
+
+    .remove-btn {
+        bottom: 0.5em;
+        top: 0.5em;
+        right: 0.5em;
+    }
+
+    .btn-remove-left {
+        right: 3.5em !important;
+    }
+
+    #music-list li .handle {
+        display: none;
+    }
+
+    #music-list li {
+        padding-left: 20px !important;
     }
 }
 
@@ -133,14 +169,6 @@ html, body, #container {
     padding-top: -1em;
 }
 
-.remove-btn {
-    bottom: 0.3em;
-    color: white;
-    position: absolute;
-    right: 1em;
-    top: 0.3em;
-}
-
 .list-text {
     display: block;
     margin-top: 0.4em;
@@ -164,6 +192,7 @@ html, body, #container {
 
 #music-list {
     flex: 1 1 auto;
+    min-height: 91.5%;
 }
 
 ul {

@@ -101,7 +101,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
                     ?>
         };</script>
 </head>
-<body>
+<body data-role="page">
 <!--Main Content Container-->
 <div id="container">
     <!--Visual Half-->
@@ -119,16 +119,17 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
             <i class="fa fa-play clickable" id="btnPlayPause" onclick="player.playPauseButtonClicked();"></i>
             <i class="fa fa-forward clickable" id="btnForward" onclick="player.forwardButtonClicked();"></i>
             <input id="volumeSlider" data-slider-id='volumeSlider_id' type="text" data-slider-min="0" data-slider-max="100" data-slider-step="1" data-slider-value="100"/>
-            <button id="btnShowList" class="btn btn-primary"><i class="fa fa-arrow-circle-up" onclick="alert('TODO');"></i></button>
+            <button id="btnShowList" class="btn btn-primary" onclick="showList()"><i class="fa fa-arrow-circle-up"></i></button>
         </div>
     </div>
     <!--List Half-->
-    <div class="first-half">
+    <div class="first-half" id="first-half-div">
         <!--List-->
         <ul id="music-list" class="list_style_default">
         </ul>
         <div class="footer">
             <p class="small"><? echo($config["title"]) ?>&nbsp;-&nbsp;<span id="clock"></span></p>
+            <button class="btn btn-info" id="btnHideList" onclick="showList()"><i class="fa fa-arrow-down"></i></button>
             <a class="btn btn-info" id="btnUpload"><i class="fa fa-plus"></i></a>
         </div>
     </div>
