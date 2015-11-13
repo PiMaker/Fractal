@@ -4,6 +4,14 @@ if (temp !== undefined && temp !== "") {
     document.getElementById("chkPassword").checked = true;
 }
 
+window.onresize = function () {
+    if (window.innerHeight < 465) {
+        $("footer").hide();
+    } else {
+        $("footer").show();
+    }
+};
+
 function connectClick() {
     var pass = $("#inputPassword").val();
 

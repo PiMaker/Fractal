@@ -100,7 +100,10 @@ $(function () {
 
             newElement.find(".list-text").bind("click", function () {
                 if (deviceWidth <= 768) {
-                    $(this).parent().stop().css("background-color", "#3498db").animate({backgroundColor: "#FFFFFF"}, 1000);
+                    $(this).parent().stop().css("background-color", "#3498db").animate({backgroundColor: "#FFFFFF"}, 500);
+                    setTimeout(function (el) {
+                        el.stop().css("background-color", "#FFFFFF");
+                    }, 500, $(this).parent());
                     var clone = $(this).parent().clone();
                     $("#play-list").append(clone);
                     fixPlayListItem({item:clone});
