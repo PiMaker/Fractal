@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c2772e45-27dc-4cf3-8ced-42237bf8c80c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/music.css" afterPath="$PROJECT_DIR$/css/music.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/music.php" afterPath="$PROJECT_DIR$/music.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/fractal.js" afterPath="$PROJECT_DIR$/scripts/fractal.js" />
     </list>
     <ignored path="Fractal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,36 +25,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="music.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="music.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/music.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.384615">
-              <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.4054054">
+              <caret line="77" column="139" selection-start-line="77" selection-start-column="139" selection-end-line="77" selection-end-column="139" />
               <folding>
-                <marker date="1447354422340" expanded="true" signature="128:373" placeholder="..." />
-                <marker date="1447354422340" expanded="true" signature="1273:1316" placeholder="{...}" />
-                <marker date="1447354422340" expanded="true" signature="1329:1372" placeholder="{...}" />
-                <marker date="1447354422340" expanded="true" signature="1771:1950" placeholder="..." />
-                <marker date="1447354422340" expanded="true" signature="2174:3636" placeholder="{...}" />
-                <marker date="1447354422340" expanded="true" signature="2371:2473" placeholder="{...}" />
-                <marker date="1447354422340" expanded="true" signature="2774:3529" placeholder="{...}" />
-                <marker date="1447354422340" expanded="true" signature="3142:3455" placeholder="{...}" />
-                <marker date="1447354422340" expanded="true" signature="3272:3420" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fractal.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fractal.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/fractal.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35185185">
-              <caret line="97" column="79" selection-start-line="97" selection-start-column="79" selection-end-line="97" selection-end-column="79" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="247" column="1" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
               <folding>
-                <marker date="1447354666179" expanded="true" signature="3509:3522" placeholder="..." />
-                <marker date="1447354666179" expanded="true" signature="3954:3967" placeholder="..." />
-                <marker date="1447354666179" expanded="true" signature="4003:4016" placeholder="..." />
+                <marker date="1447429372956" expanded="true" signature="3898:3911" placeholder="..." />
+                <marker date="1447429372956" expanded="true" signature="4343:4356" placeholder="..." />
+                <marker date="1447429372956" expanded="true" signature="4392:4405" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-19.161291">
+              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.32258">
+              <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/upload/upload.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.2580647">
+              <caret line="6" column="92" selection-start-line="6" selection-start-column="92" selection-end-line="6" selection-end-column="92" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,8 +87,8 @@
       <file leaf-file-name="music.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/music.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="56" column="18" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="18" />
+            <state vertical-scroll-proportion="-9.193548">
+              <caret line="195" column="19" selection-start-line="195" selection-start-column="19" selection-end-line="195" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -80,8 +103,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/css/music.css" />
-        <option value="$PROJECT_DIR$/music.php" />
+        <option value="$PROJECT_DIR$/upload/index.php" />
+        <option value="$PROJECT_DIR$/upload/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/upload/upload.php" />
         <option value="$PROJECT_DIR$/scripts/fractal.js" />
+        <option value="$PROJECT_DIR$/music.php" />
       </list>
     </option>
   </component>
@@ -95,10 +121,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -125,6 +151,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -141,6 +168,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Fractal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fractal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Fractal" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upload" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -174,127 +215,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="D:/Programme/PHP/php.exe" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/css/music.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/music.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/fractal.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/player.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/scripts/visualizations/waveformVisualization.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -343,15 +269,22 @@
       <option name="project" value="LOCAL" />
       <updated>1446995012623</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="We are responsive!">
+      <created>1447430097396</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1447430097396</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16302083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -360,7 +293,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -386,7 +318,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Getting more responsive than ever" />
-    <option name="LAST_COMMIT_MESSAGE" value="Getting more responsive than ever" />
+    <MESSAGE value="We are responsive!" />
+    <option name="LAST_COMMIT_MESSAGE" value="We are responsive!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -396,17 +329,41 @@
     <entry file="file://$PROJECT_DIR$/music.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/fractal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1447429372956" expanded="true" signature="3898:3911" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="4343:4356" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="4392:4405" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/music.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="18" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
           <caret line="142" column="46" selection-start-line="142" selection-start-column="46" selection-end-line="142" selection-end-column="46" />
           <folding>
-            <marker date="1447354422340" expanded="true" signature="128:373" placeholder="..." />
-            <marker date="1447354422340" expanded="true" signature="1273:1316" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="1329:1372" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="1771:1950" placeholder="..." />
-            <marker date="1447354422340" expanded="true" signature="2174:3636" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="2371:2473" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="2774:3529" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="3142:3455" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="3272:3420" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -416,9 +373,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding>
-            <marker date="1447354666179" expanded="true" signature="3509:3522" placeholder="..." />
-            <marker date="1447354666179" expanded="true" signature="3954:3967" placeholder="..." />
-            <marker date="1447354666179" expanded="true" signature="4003:4016" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="3898:3911" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="4343:4356" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="4392:4405" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -436,15 +393,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="142" column="46" selection-start-line="142" selection-start-column="46" selection-end-line="142" selection-end-column="46" />
           <folding>
-            <marker date="1447354422340" expanded="true" signature="128:373" placeholder="..." />
-            <marker date="1447354422340" expanded="true" signature="1273:1316" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="1329:1372" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="1771:1950" placeholder="..." />
-            <marker date="1447354422340" expanded="true" signature="2174:3636" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="2371:2473" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="2774:3529" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="3142:3455" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="3272:3420" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -454,9 +404,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding>
-            <marker date="1447354666179" expanded="true" signature="3509:3522" placeholder="..." />
-            <marker date="1447354666179" expanded="true" signature="3954:3967" placeholder="..." />
-            <marker date="1447354666179" expanded="true" signature="4003:4016" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="3898:3911" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="4343:4356" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="4392:4405" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -478,38 +428,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/music.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="18" />
+        <state vertical-scroll-proportion="-9.193548">
+          <caret line="195" column="19" selection-start-line="195" selection-start-column="19" selection-end-line="195" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/music.php">
+    <entry file="file://$PROJECT_DIR$/upload/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.384615">
-          <caret line="103" column="22" selection-start-line="103" selection-start-column="22" selection-end-line="103" selection-end-column="22" />
+        <state vertical-scroll-proportion="-19.161291">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
           <folding>
-            <marker date="1447354422340" expanded="true" signature="128:373" placeholder="..." />
-            <marker date="1447354422340" expanded="true" signature="1273:1316" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="1329:1372" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="1771:1950" placeholder="..." />
-            <marker date="1447354422340" expanded="true" signature="2174:3636" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="2371:2473" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="2774:3529" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="3142:3455" placeholder="{...}" />
-            <marker date="1447354422340" expanded="true" signature="3272:3420" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.32258">
+          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/upload/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.2580647">
+          <caret line="6" column="92" selection-start-line="6" selection-start-column="92" selection-end-line="6" selection-end-column="92" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/fractal.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35185185">
-          <caret line="97" column="79" selection-start-line="97" selection-start-column="79" selection-end-line="97" selection-end-column="79" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="247" column="1" selection-start-line="247" selection-start-column="1" selection-end-line="247" selection-end-column="1" />
           <folding>
-            <marker date="1447354666179" expanded="true" signature="3509:3522" placeholder="..." />
-            <marker date="1447354666179" expanded="true" signature="3954:3967" placeholder="..." />
-            <marker date="1447354666179" expanded="true" signature="4003:4016" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="3898:3911" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="4343:4356" placeholder="..." />
+            <marker date="1447429372956" expanded="true" signature="4392:4405" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/music.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4054054">
+          <caret line="77" column="139" selection-start-line="77" selection-start-column="139" selection-end-line="77" selection-end-column="139" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

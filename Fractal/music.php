@@ -75,7 +75,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
                             echo("_".$counter.":{");
 
                             echo("Filename:'".$file."',");
-                            echo("URL:'".substr($_SERVER['REQUEST_URI'], 0, strrpos($_SERVER['REQUEST_URI'], '/') + 1)."music/".$file."'");
+                            echo('URL:"'.substr($_SERVER['REQUEST_URI'], 0, strrpos($_SERVER['REQUEST_URI'], '/') + 1)."music/".$file.'"');
 
                             if ($endsWithMp3)
                             {
