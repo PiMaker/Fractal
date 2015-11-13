@@ -28,11 +28,14 @@
       <file leaf-file-name="music.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/music.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4054054">
-              <caret line="77" column="139" selection-start-line="77" selection-start-column="139" selection-end-line="77" selection-end-column="139" />
+            <state vertical-scroll-proportion="0.43125734">
+              <caret line="76" column="58" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1447430815286" expanded="true" signature="4977:5424" placeholder="..." />
+                <marker date="1447430815286" expanded="true" signature="5053:5067" placeholder="..." />
+                <marker date="1447430815286" expanded="true" signature="5096:5413" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -275,7 +278,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447430097396</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Quick bug fix">
+      <created>1447430649175</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447430649175</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -319,7 +328,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Getting more responsive than ever" />
     <MESSAGE value="We are responsive!" />
-    <option name="LAST_COMMIT_MESSAGE" value="We are responsive!" />
+    <MESSAGE value="Quick bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick bug fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -333,6 +343,9 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1447430815286" expanded="true" signature="4977:5424" placeholder="..." />
+            <marker date="1447430815286" expanded="true" signature="5053:5067" placeholder="..." />
+            <marker date="1447430815286" expanded="true" signature="5096:5413" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -364,6 +377,9 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1447430815286" expanded="true" signature="4977:5424" placeholder="..." />
+            <marker date="1447430815286" expanded="true" signature="5053:5067" placeholder="..." />
+            <marker date="1447430815286" expanded="true" signature="5096:5413" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -395,6 +411,9 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1447430815286" expanded="true" signature="4977:5424" placeholder="..." />
+            <marker date="1447430815286" expanded="true" signature="5053:5067" placeholder="..." />
+            <marker date="1447430815286" expanded="true" signature="5096:5413" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -474,11 +493,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/music.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4054054">
-          <caret line="77" column="139" selection-start-line="77" selection-start-column="139" selection-end-line="77" selection-end-column="139" />
+        <state vertical-scroll-proportion="0.43125734">
+          <caret line="76" column="58" selection-start-line="76" selection-start-column="58" selection-end-line="76" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1447430815286" expanded="true" signature="4977:5424" placeholder="..." />
+            <marker date="1447430815286" expanded="true" signature="5053:5067" placeholder="..." />
+            <marker date="1447430815286" expanded="true" signature="5096:5413" placeholder="..." />
           </folding>
         </state>
       </provider>
