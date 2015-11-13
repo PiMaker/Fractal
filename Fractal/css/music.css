@@ -102,7 +102,7 @@ html, body, #container {
 
 /* Landscape orientation screen division */
 
-@media (orientation: landscape) {
+@media all and (orientation: landscape) {
     .first-half {
         background-color: #61c0ff;
         float: left;
@@ -120,19 +120,21 @@ html, body, #container {
     /* Responsive...ness...ness? */
     @media all and (max-device-width: 768px) {
         .first-half {
-            width: 0;
+            height: 0;
+            width: 100%;
             display: none;
         }
 
         .second-half {
             width: 100%;
+            height: 100%;
         }
     }
 }
 
 /* Portrait orientation screen division */
 
-@media (orientation: portrait) {
+@media all and (orientation: portrait) {
     .first-half {
         background-color: #61c0ff;
         height: 50%;
@@ -192,7 +194,6 @@ html, body, #container {
 
 #music-list {
     flex: 1 1 auto;
-    min-height: 91.5%;
 }
 
 ul {

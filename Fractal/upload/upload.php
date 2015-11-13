@@ -5,7 +5,6 @@ $config = (require "../config.php");
 
 // Auth
 if (hash("sha256", $config["password"]) != $_POST["password"] || !$config["allow-modify"]) {
-    // Shows login page if unauthorized
     die('{"status":"error"}');
 }
 

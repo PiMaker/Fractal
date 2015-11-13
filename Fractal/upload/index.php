@@ -33,7 +33,9 @@ die('<html><head><meta http-equiv="refresh" content="0; url=../index.php"/></hea
 			</ul>
 		</form>
 
-		<a style="text-align: center; padding-top: 4em;">Back to fractal</a>
+		<div style="width: 100%; text-align: center;">
+			<button class="btn btn-primary" onclick="window.history.back()">Back to Fractal</button>
+		</div>
         
 		<!-- JavaScript Includes -->
 		<script src="../scripts/jquery-2.1.4.min.js"></script>

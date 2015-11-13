@@ -52,9 +52,15 @@ $(function () {
     });
     volumeSlider.on("change", function (val) {
         if (music.audio) {
-            music.audio.volume = val.value.newValue / 100.0;
+            var value = val.value.newValue / 100.0;
+            music.audio.volume = value;
+            localStorage.setItem("fractal-volume", value);
         }
     });
+    var sliderVal = localStorage.getItem("fractal-volume");
+    if (sliderVal != undefined) {
+        volumeSlider.slider("setValue", sliderVal*100);
+    }
 
     window.onresize = function () {
         if (deviceWidth > 768) {
@@ -92,12 +98,14 @@ $(function () {
             var newElement = $("<li><span class='handle'>☰</span><span class='list-text'>" + text + "</span><span class='music-filename'>" + musicTitle.Filename + "</span><span class='music-url'>" + musicTitle.URL + "</span></li>");
             newElement.addClass("list-group-item");
 
-            newElement.find(".list-text").onclick = function () {
+            newElement.find(".list-text").bind("click", function () {
                 if (deviceWidth <= 768) {
-                    newElement.css("background-color", "#3498db")
-                        .animate({ backgroundColor: "#FFFFFF"}, 1500); // TODO!
+                    $(this).parent().stop().css("background-color", "#3498db").animate({backgroundColor: "#FFFFFF"}, 1000);
+                    var clone = $(this).parent().clone();
+                    $("#play-list").append(clone);
+                    fixPlayListItem({item:clone});
                 }
-            };
+            });
 
             var playBtn = $('<button><i style="color: white;"></i></button>');
             playBtn.children().first().addClass("fa");
@@ -153,25 +161,7 @@ $(function () {
         handle: ".handle",
         scroll: true,
         sort: true,
-        onSort: function (evt) {
-            updateRandomModeText();
-            var item = $(evt.item);
-            if (item.find("button").length === 2 && playListJQ.has(item).length) {
-                item.find("button").remove();
-                var removeBtn = $("<button><i></i></button>");
-                removeBtn.children().first().addClass("fa");
-                removeBtn.children().first().addClass("fa-times");
-                removeBtn.appendTo(item);
-                removeBtn.addClass("remove-btn");
-                removeBtn.addClass("btn");
-                removeBtn.addClass("btn-info");
-                removeBtn.on("click", function () {
-                    item.remove();
-                    updateRandomModeText();
-                });
-                //item.tooltip("disable");
-            }
-        }
+        onSort: fixPlayListItem
     });
 });
 
@@ -205,6 +195,27 @@ function deleteButton() {
 function playButton() {
     player.playUrl($(this).parent().find(".music-url").first().text());
 }
+
+function fixPlayListItem(evt) {
+    updateRandomModeText();
+    var item = $(evt.item);
+    if (item.find("button").length === 2 && playListJQ.has(item).length) {
+        item.find("button").remove();
+        var removeBtn = $("<button><i></i></button>");
+        removeBtn.children().first().addClass("fa");
+        removeBtn.children().first().addClass("fa-times");
+        removeBtn.appendTo(item);
+        removeBtn.addClass("remove-btn");
+        removeBtn.addClass("btn");
+        removeBtn.addClass("btn-info");
+        removeBtn.on("click", function () {
+            item.remove();
+            updateRandomModeText();
+        });
+        //item.tooltip("disable");
+    }
+}
+
 
 var isListHidden = true;
 var animationDuration = 300;

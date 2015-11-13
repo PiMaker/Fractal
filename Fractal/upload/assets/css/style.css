@@ -11,6 +11,36 @@
     General Styles
 --------------------------*/
 
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #0099cc;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #33a6cc;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #007299;
+    box-shadow: none;
+}
+
 html {
     background-color: #61c0ff;
 
@@ -18,7 +48,7 @@ html {
     background-image: -moz-radial-gradient(center, #61c0ff, #3498db);
     background-image: radial-gradient(center, #61c0ff, #3498db);
 
-    min-height: 900px;
+    min-height: 100%;
 }
 
 body {
