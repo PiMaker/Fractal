@@ -137,7 +137,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
 
 <!--Scripts-->
 <script src="scripts/jquery-2.1.4.min.js"></script>
-<script src="scripts/jquery.color.js"></script>
+<script src="scripts/velocity.min.js"></script>
 <script src="scripts/ply.min.js"></script>
 <script src="scripts/sha256.min.js"></script>
 <script src="scripts/tether.min.js"></script>

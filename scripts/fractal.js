@@ -105,7 +105,7 @@ $(function () {
                     tp.stop().css("background-color", "rgba(0,0,0,255)");
                     var from = {property: 0};
                     var to = {property: 255};
-                    jQuery(from).animate(to, {
+                    jQuery(from).velocity(to, {
                         duration: 500,
                         progress: function () {
                             tp.css("background-color", "rgba(" + (this.property|0) + "," + (this.property|0) + "," + (this.property|0)  +",255)");
@@ -247,22 +247,22 @@ function showList() {
     if (isListHidden) {
         isListHidden = false;
         list.css("display", "flex");
-        list.animate({height: "100%"}, {
+        list.velocity({height: "100%"}, {
             duration: animationDuration,
             complete: function () {
                 visual.css("display", "none");
             }
         });
-        visual.animate({height: "0%"}, {duration: animationDuration});
+        visual.velocity({height: "0%"}, {duration: animationDuration});
     } else {
         isListHidden = true;
         visual.css("display", "block");
-        list.animate({height: "0%"}, {
+        list.velocity({height: "0%"}, {
             duration: animationDuration,
             complete: function () {
                 list.css("display", "none");
             }
         });
-        visual.animate({height: "100%"}, {duration: animationDuration});
+        visual.velocity({height: "100%"}, {duration: animationDuration});
     }
 }
