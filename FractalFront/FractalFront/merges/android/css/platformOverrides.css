@@ -1,7 +1,0 @@
-﻿/* Very strange Android scroll bar hack */
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #606060;
-}
