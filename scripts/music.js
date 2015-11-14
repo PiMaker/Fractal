@@ -21,7 +21,6 @@
     play: function (url) {
         music.audio.pause();
         music.audio.src = url;
-        music.audio.volume = 1.0;
         music.audio.onended = music.finished;
         music.audio.play();
     },
