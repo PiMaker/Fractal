@@ -12,6 +12,8 @@ window.onresize = function () {
     }
 };
 
+$(window.onresize);
+
 function connectClick() {
     var pass = $("#inputPassword").val();
 

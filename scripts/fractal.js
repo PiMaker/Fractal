@@ -147,6 +147,12 @@ $(function () {
         }
     }
 
+    var musics = $(musicList).children("li");
+    musics.sort(function (a,b) {
+        return $(a).find(".list-text").first().text().localeCompare($(b).find(".list-text").first().text());
+    });
+    musics.detach().appendTo($(musicList));
+
     // Create sortable lists
     Sortable.create(musicList, {
         group: {name: "music-list-group", pull: "clone", put: false},
