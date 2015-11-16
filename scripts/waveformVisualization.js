@@ -1,5 +1,6 @@
 ﻿var waveformVisualization = {
     amplitudeMultiplier: 0.15,
+    precisionModifier: 8,
     canvas: null,
     mousePos: {x: 0, y: 0},
     draw: function (canvasCtx) {
@@ -32,28 +33,27 @@
 
             canvasCtx.beginPath();
 
-            var sliceWidth = width / dataArray.length * 2;
+            var sliceWidth = width / dataArray.length * waveformVisualization.precisionModifier;
             var x = 0;
 
-            for (var i = 0; i < dataArray.length; i += 2) {
+            for (var i = 0; i < dataArray.length; i += waveformVisualization.precisionModifier) {
 
-                var v = (dataArray[i]) / (128.0);
-                var y = v * height2;
-                var ydiff = y - height2;
+                var ydiff = height2 + ((dataArray[i] / 128.0) * height2 - height2) * ampMul;
 
                 if (i > position) {
+                    canvasCtx.lineTo(x, ydiff);
                     canvasCtx.stroke();
                     canvasCtx.beginPath();
-                    canvasCtx.moveTo(x, height2 + ydiff * ampMul);
+                    canvasCtx.moveTo(x, ydiff);
                     canvasCtx.strokeStyle = "#ecf0f1";
                     position = 99999999;
                     continue;
                 }
 
                 if (i === 0) {
-                    canvasCtx.moveTo(x, height2 + ydiff * ampMul);
+                    canvasCtx.moveTo(x, ydiff);
                 } else {
-                    canvasCtx.lineTo(x, height2 + ydiff * ampMul);
+                    canvasCtx.lineTo(x, ydiff);
                 }
 
                 x += sliceWidth;

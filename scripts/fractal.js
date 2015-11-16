@@ -62,17 +62,9 @@ $(function () {
         volumeSlider.slider("setValue", sliderVal*100);
     }
 
-    window.onresize = function () {
-        if (deviceWidth > 768) {
-            //noinspection JSValidateTypes
-            document.getElementById("first-half-div").style = "";
-            //noinspection JSValidateTypes
-            document.getElementById("second-half-div").style = "position: relative;";
-            isListHidden = true;
-        }
-    };
+    var musicListJQ = $("#music-list");
 
-    $("#music-list").scrollTop = 0; // Force scroll bar to show
+    musicListJQ.scrollTop = 0; // Force scroll bar to show
 
     $("#btnUpload").attr("href", "upload/index.php?password=" + sessionStorage.getItem("fractal-pass"));
 
@@ -80,7 +72,6 @@ $(function () {
 
     music.init();
     player.init();
-    waveformVisualization.beginRendering(canvas);
 
     // Update list
     var musicList = document.getElementById("music-list");
@@ -99,26 +90,27 @@ $(function () {
             newElement.addClass("list-group-item");
 
             newElement.find(".list-text").bind("click", function () {
-                if (deviceWidth <= 768) {
-                    var t = $(this);
-                    var tp = t.parent();
-                    tp.stop().css("background-color", "rgba(0,0,0,255)");
-                    var from = {property: 0};
-                    var to = {property: 255};
-                    jQuery(from).velocity(to, {
-                        duration: 500,
-                        progress: function () {
-                            tp.css("background-color", "rgba(" + (this.property|0) + "," + (this.property|0) + "," + (this.property|0)  +",255)");
-                        }
-                    });
-                    setTimeout(function () {
-                        tp.stop().css("background-color", "rgba(255,255,255,255)");
-                    }, 500);
-                    var clone = tp.clone();
-                    clone.css("background-color", "");
-                    $("#play-list").append(clone);
-                    fixPlayListItem({item:clone});
-                }
+                var t = $(this);
+                var tp = t.parent();
+                tp.stop().css("background-color", "rgba(0,0,0,255)").css("border", "rgba(0,0,0,255)");
+                var from = {property: 0};
+                var to = {property: 255};
+                $(from).animate(to, {
+                    duration: 500,
+                    progress: function () {
+                        var rgba = "rgba(" + (this.property|0) + "," + (this.property|0) + "," + (this.property|0)  +",255)";
+                        tp.css("background-color", rgba)
+                          .css("border", rgba);
+                    }
+                });
+                setTimeout(function () {
+                    tp.stop().css("background-color", "rgba(255,255,255,255)").css("border", "rgba(255,255,255,255)");
+                }, 500);
+                var clone = tp.clone();
+                clone.css("background-color", "");
+                clone.css("border", "");
+                $("#play-list").append(clone);
+                fixPlayListItem({item:clone});
             });
 
             var playBtn = $('<button><i style="color: white;"></i></button>');
@@ -141,7 +133,7 @@ $(function () {
                 removeBtn.on("click", deleteButton);
             }
 
-            newElement.appendTo($(musicList));
+            newElement.appendTo(musicListJQ);
 
             //newElement.tooltip({title: "test"});
         }
@@ -151,7 +143,7 @@ $(function () {
     musics.sort(function (a,b) {
         return $(a).find(".list-text").first().text().localeCompare($(b).find(".list-text").first().text());
     });
-    musics.detach().appendTo($(musicList));
+    musics.detach().appendTo(musicListJQ);
 
     // Create sortable lists
     Sortable.create(musicList, {
@@ -183,13 +175,40 @@ $(function () {
         sort: true,
         onSort: fixPlayListItem
     });
+
+    var musicListItems = musicListJQ.find("li");
+    musicListJQ.scroll(function () {
+        musicListItems.each(function () {
+            var children = $(this).find("*");
+            if (isVisible($(this))) {
+                children.css("display", "block");
+            } else {
+                children.css("display", "none");
+            }
+        });
+    });
+    musicListJQ.trigger("scroll");
+
+    window.onresize = function () {
+        if (deviceWidth > 768) {
+            //noinspection JSValidateTypes
+            document.getElementById("first-half-div").style = "";
+            //noinspection JSValidateTypes
+            document.getElementById("second-half-div").style = "position: relative;";
+            isListHidden = true;
+        }
+
+        musicListJQ.trigger("scroll");
+    };
+
+    waveformVisualization.beginRendering(canvas);
 });
 
 function deleteButton() {
     var filename = $(this).parent().find(".music-filename").first().text();
     var URL = $(this).parent().find(".music-url").first().text();
     Ply.dialog("confirm", 'Are you sure you want to delete "' + filename + '"?')
-        .done(function (ui) {
+        .done(function () {
             $.ajax({
                 dataType: "json",
                 url: "api.php?password=" + sessionStorage.getItem("fractal-pass") + "&action=delete&item=" + encodeURIComponent(filename),
@@ -236,9 +255,18 @@ function fixPlayListItem(evt) {
     }
 }
 
+function isVisible($obj) {
+    var top = $(window).scrollTop() - 50;
+    var bottom = top + $(window).height();
+    var objTop = $obj.offset().top;
+    var objBottom = objTop + $obj.height();
+
+    return objTop < bottom && objBottom > top;
+}
+
 
 var isListHidden = true;
-var animationDuration = 300;
+var animationDuration = 800;
 
 function showList() {
     var list = $(".first-half");
@@ -251,6 +279,7 @@ function showList() {
             duration: animationDuration,
             complete: function () {
                 visual.css("display", "none");
+                $("#music-list").trigger("scroll");
             }
         });
         visual.velocity({height: "0%"}, {duration: animationDuration});
@@ -261,6 +290,7 @@ function showList() {
             duration: animationDuration,
             complete: function () {
                 list.css("display", "none");
+                $("#music-list").find("li *").css("display", "none");
             }
         });
         visual.velocity({height: "100%"}, {duration: animationDuration});

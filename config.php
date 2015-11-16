@@ -8,7 +8,7 @@ return array(
 
     // Change to true/false depending on whether you want Fractal to only be accessible over encrypted connections.
     // This is strongly recommended when using a password.
-    "enforce-ssl" => true,
+    "enforce-ssl" => false,
 
     // Text that will be displayed on the login page. Note that the login page will not be accessible if you haven't
     // set a password.

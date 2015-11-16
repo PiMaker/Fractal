@@ -146,7 +146,7 @@ if (hash("sha256", $config["password"]) != $_GET["password"]) {
 <script src="scripts/bootstrap-slider.min.js"></script>
 <script src="scripts/music.js"></script>
 <!--Custom-->
-<script src="scripts/visualizations/waveformVisualization.js"></script>
+<script src="scripts/waveformVisualization.js"></script>
 <!--Custom-->
 <script src="scripts/fractal.js"></script>
 <!--Custom-->
