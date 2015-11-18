@@ -106,9 +106,9 @@ $(function () {
                 setTimeout(function () {
                     tp.stop().css("background-color", "rgba(255,255,255,255)").css("border", "rgba(255,255,255,255)");
                 }, 500);
+                tp.css("background-color", "");
+                tp.css("border", "");
                 var clone = tp.clone();
-                clone.css("background-color", "");
-                clone.css("border", "");
                 $("#play-list").append(clone);
                 fixPlayListItem({item:clone});
             });
@@ -202,6 +202,10 @@ $(function () {
     };
 
     waveformVisualization.beginRendering(canvas);
+
+    if (getParameterByName("autoplay") == "1") {
+        player.chooseNext();
+    }
 });
 
 function deleteButton() {
@@ -229,6 +233,13 @@ function deleteButton() {
                 }
             });
         });
+}
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 function playButton() {
@@ -266,7 +277,7 @@ function isVisible($obj) {
 
 
 var isListHidden = true;
-var animationDuration = 800;
+var animationDuration = 600;
 
 function showList() {
     var list = $(".first-half");
@@ -283,6 +294,7 @@ function showList() {
             }
         });
         visual.velocity({height: "0%"}, {duration: animationDuration});
+        $("#music-list").find("li *").css("display", "block");
     } else {
         isListHidden = true;
         visual.css("display", "block");
